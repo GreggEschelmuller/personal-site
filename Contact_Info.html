@@ -2,50 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Gregg Eschelmuller - Contact Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-
-
 </head>
 <body>
-    <table>
-        <tr>
-            <td><img src="images/gregg-modified.png" alt="gregg profile picture"></td>
-            <td>
-                <h1>Gregg Eschelmuller</h1>
-                <p><em>Phd Student at the University of British Columbia</em></p>
-            </td>
-        </tr>
-    </table>
-        <table>
-        <tr>
-            <td><p><a href="index.html">Home</a>  ----  </p></td>
-            <td><p><a href="cv.html">CV</a>  ----  </p></td>
-            <td><p><a href="Contact_Info.html">Contact Me!</a></p></td>
-        </tr>
-    </table>
-<hr style="border-style: none;
-border-top-style: dotted;
-border-color: #3A8891;
-border-width: 5px;
-width: 100%;">
-    <h2>My Contact Information</h2>
-    <ul>
-        <li>Email: gregg.eschelmuller@ubc.ca; g.eschelmuller@gmail.com</li>
-        <li>Address: 6108 Thunderbird Blvd, Vancouver, BC V6T 2A1</li>
-    </ul>
-    <hr>
-    <h3>Contact Me:</h3><br>
-    <form action="mailto:g.eschelmuller@gmail.com" method="post" enctype="text/plain">
-        <label>Your name:</label>
-        <input type="text" name="yourName"><br>
-        <label>Your email: </label>
-        <input type="email" name="yourEmail" id=""><br>
-        <label>Your message:</label><br>
-        <textarea name="yourMessage" id="" cols="30" rows="10"></textarea><br>
-        <input type="submit">
-    </form>
+    <header>
+        <div class="container">
+            <h1>Gregg Eschelmuller</h1>
+            <p>PhD Student at the University of British Columbia</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="Contact_Info.html">Contact Me!</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section>
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:gregg.eschelmuller@ubc.ca">gregg.eschelmuller@ubc.ca</a></p>
+                <p><strong>Alternative Email:</strong> <a href="mailto:g.eschelmuller@gmail.com">g.eschelmuller@gmail.com</a></p>
+                <p><strong>Address:</strong> 6108 Thunderbird Blvd, Vancouver, BC V6T 2A1</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+            <form class="contact-form" action="#" method="POST">
+                <div>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Gregg Eschelmuller. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

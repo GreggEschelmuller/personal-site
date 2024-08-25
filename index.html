@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Gregg's Personal Site</title>
-        <link rel="stylesheet" href="css/styles.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregg Eschelmuller - PhD Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gregg Eschelmuller</h1>
+            <p>PhD Student at the University of British Columbia</p>
+        </div>
+    </header>
 
-    </head>
-    <body>  
-        <table>
-            <tr>
-                <td><img src="images/gregg-modified.png" alt="gregg profile picture"></td>
-                <td>
-                    <h1>Gregg Eschelmuller</h1>
-                    <p><em>Phd Student at the University of British Columbia</em></p>
-                </td>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td><p><a href="index.html">Home</a>  ----  </p></td>
-                <td><p><a href="cv.html">CV</a>  ----  </p></td>
-                <td><p><a href="Contact_Info.html">Contact Me!</a></p></td>
-            </tr>
-        </table>
-    <hr style="border-style: none;
-    border-top-style: dotted;
-    border-color: #3A8891;
-    border-width: 5px;
-    width: 100%;">
-    <h2>About Me</h2>
-        <p> Hi! My name is Gregg and I am a Phd student at the University of British Columbia. I am interested in how the nervous systems controls movement. I am working in the <a href="https://kin.educ.ubc.ca/research/neuro-mechanical/human-neurophysiology-lab/">human neurophysiology lab</a> and the <a href="https://kin.educ.ubc.ca/research/neuro-mechanical/perceptual-motor-dynamics-lab/">perceptual motor dynamics lab</a>. My research focuses on sensorimotor control and learning, specifically, I am interested in how the brain processes and learns from sensory information. Check out my <a href="cv.html">CV</a> to learn more about my background and research!</p>
-    <hr>
-    <h2>Recent Publications</h2>
-    <ol>
-        <li>Grose, G., Manzone, D., <strong>Eschelmuller, G.,</strong>, Peters, R., Carpenter, M.G.., Inglis, J.T., Chua, R. The effects of eccentric exercise-induced fatigue on position sense during goal-directed movement., In press Journal of Applied Physiology, https://doi.org/10.1152/japplphysiol.00177.2021</li>
-        <li><strong>Eschelmuller, G.,</strong>, Chua, R., Carpenter, M. G., & Inglis, J. T. (2021). The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. Neuroscience Letters, 764, 136279. https://doi.org/10.1016/j.neulet.2021.136279 </li>
-        <li>Mildren, R. L., Schmidt, M. E., <strong>Eschelmuller, G.,</strong>, Carpenter, M. G., Blouin, J., & Inglis, J. T. (2020). Influence of age on the frequency characteristics of the soleus muscle response to Achilles tendon vibration during standing. The Journal of Physiology, 598(22), 5231-5243. https://doi.org/10.1113/jp280324</li>
-        <li><strong>Eschelmuller, G.,</strong> Mildren, R. L., Blouin, J.-S., Carpenter, M. G., & Inglis, J. T. (2020). Frequency characteristics of heteronymous responses evoked by Achilles tendon vibration during quiet stance. Neuroscience Letters,736, 135290. https://doi.org/10.1016/j.neulet.2020.135290</li>
-    </ol>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="Contact_Info.html">Contact Me!</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    </body>
+    <main class="container">
+        <section class="profile">
+            <img src="images/gregg-modified.png" alt="Gregg Eschelmuller profile picture" class="profile-image">
+            <div>
+                <h2>About Me</h2>
+                <p>Hi! My name is Gregg and I am a PhD student at the University of British Columbia. I am interested in how the nervous system controls movement. I am working in the <a href="https://kin.educ.ubc.ca/research/neuro-mechanical/human-neurophysiology-lab/">human neurophysiology lab</a> and the <a href="https://kin.educ.ubc.ca/research/neuro-mechanical/perceptual-motor-dynamics-lab/">perceptual motor dynamics lab</a>.</p>
+                <p>My research focuses on sensorimotor control and learning, specifically, I am interested in how the brain processes and learns from sensory information. Check out my <a href="cv.html">CV</a> to learn more about my background and research!</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Recent Publications</h2>
+            <ul>
+                <li>Grose, G., Manzone, D., <strong>Eschelmuller, G.,</strong> Peters, R., Carpenter, M.G.., Inglis, J.T., Chua, R. The effects of eccentric exercise-induced fatigue on position sense during goal-directed movement., In press Journal of Applied Physiology, <a href="https://doi.org/10.1152/japplphysiol.00177.2021">https://doi.org/10.1152/japplphysiol.00177.2021</a></li>
+                <li><strong>Eschelmuller, G.,</strong> Chua, R., Carpenter, M. G., & Inglis, J. T. (2021). The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. Neuroscience Letters, 764, 136279. <a href="https://doi.org/10.1016/j.neulet.2021.136279">https://doi.org/10.1016/j.neulet.2021.136279</a></li>
+                <li>Mildren, R. L., Schmidt, M. E., <strong>Eschelmuller, G.,</strong> Carpenter, M. G., Blouin, J., & Inglis, J. T. (2020). Influence of age on the frequency characteristics of the soleus muscle response to Achilles tendon vibration during standing. The Journal of Physiology, 598(22), 5231-5243. <a href="https://doi.org/10.1113/jp280324">https://doi.org/10.1113/jp280324</a></li>
+                <li><strong>Eschelmuller, G.,</strong> Mildren, R. L., Blouin, J.-S., Carpenter, M. G., & Inglis, J. T. (2020). Frequency characteristics of heteronymous responses evoked by Achilles tendon vibration during quiet stance. Neuroscience Letters, 736, 135290. <a href="https://doi.org/10.1016/j.neulet.2020.135290">https://doi.org/10.1016/j.neulet.2020.135290</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Gregg Eschelmuller. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
