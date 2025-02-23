@@ -430,3 +430,113 @@ main {
 html {
     scroll-behavior: smooth;
 }
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    header {
+        padding: 2rem 0;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .profile {
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .publications {
+        grid-template-columns: 1fr;
+    }
+
+    .publication-card {
+        margin: 1rem 0;
+    }
+
+    /* Blog adjustments for mobile */
+    .blog-post {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem;
+    }
+
+    /* CV adjustments for mobile */
+    .cv-section {
+        padding: 1rem;
+    }
+
+    .conference-publications {
+        margin: 1rem 0;
+    }
+
+    .toggle-btn {
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+    }
+
+    /* Footer adjustments */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 100%;
+        justify-content: center;
+        margin: 0.25rem 0;
+    }
+
+    /* Navigation theme toggle adjustment */
+    .theme-toggle {
+        margin-top: 0.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .social-links h3, .contact-info h3 {
+        font-size: 1.1rem;
+    }
+}
