@@ -12,6 +12,7 @@
     --shadow-color: rgba(0,0,0,0.1);
     --card-bg: #ffffff;
     --transition: all 0.3s ease;
+    --primary-color: #2c3e50;
 }
 
 /* Dark theme variables */
@@ -27,6 +28,7 @@
     --border-color: #74b9ff;
     --shadow-color: rgba(0,0,0,0.3);
     --card-bg: #2d3436;
+    --primary-color: #1a1b1e;
 }
 
 /* Base styles */
@@ -145,16 +147,22 @@ h3 {
     flex-wrap: wrap;
 }
 
-.profile img {
+.profile-image {
     width: 250px;
     height: 250px;
-    border-radius: 12px;
+    border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 20px var(--shadow-color);
     transition: var(--transition);
+    background: transparent;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+    overflow: hidden;
 }
 
-.profile img:hover {
+.profile-image:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px var(--shadow-color);
 }
@@ -208,19 +216,78 @@ a:not(.social-icon):hover:after {
     transform-origin: bottom left;
 }
 
-/* Footer */
+/* Footer styles */
 footer {
-    background-color: var(--header-bg);
-    color: var(--header-text);
     padding: 2rem 0;
     margin-top: 4rem;
+    background: var(--primary-color);
+    color: #ffffff;
+    width: 100%;
 }
 
 .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    padding: 2rem 0;
+}
+
+.footer-content h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    color: #ffffff;
+}
+
+.contact-info a, .social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-info a:hover, .social-icon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
 }
 
 /* Blog specific styles */
