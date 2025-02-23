@@ -57,7 +57,7 @@
         <section class="cv-section">
             <h2>Publications</h2>
             <h3>Journal Articles - Published</h3>
-            <ul>
+            <ul class="publications-list">
                 <li><strong>Eschelmuller, G</strong>., Szarka, A., Gandossi, B., Inglis, J. T., & Chua, R. (2023). The effects of periodic and noisy tendon vibration on a kinesthetic targeting task. Experimental Brain Research. <a href="https://doi.org/10.1007/s00221-023-06727-1">https://doi.org/10.1007/s00221-023-06727-1</a></li>
                 <li>Grose, G., Manzone, D., <strong>Eschelmuller, G.</strong>, Peters, R., Carpenter, M.G., Inglis, J.T., Chua, R. (2022). The effects of eccentric exercise-induced fatigue on position sense during goal-directed movement. Journal of Applied Physiology, 132(4), 1005-1019. <a href="https://doi.org/10.1152/japplphysiol.00177.2021">https://doi.org/10.1152/japplphysiol.00177.2021</a></li>
                 <li><strong>Eschelmuller, G</strong>., Chua, R., Carpenter, M. G., & Inglis, J. T. (2021). The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. Neuroscience Letters, 764, 136279. <a href="https://doi.org/10.1016/j.neulet.2021.136279">https://doi.org/10.1016/j.neulet.2021.136279</a></li>
@@ -66,7 +66,7 @@
             </ul>
             
             <h3>Journal Articles - In Preparation</h3>
-            <ul>
+            <ul class="publications-list">
                 <li><strong>Eschelmuller, G</strong>., Szarka, A., Inglis, J. Timothy., Chua, R., (in preparation). Investigating explicit and implicit sensorimotor adaptation in a bimanual aiming task.</li>
                 <li><strong>Eschelmuller, G</strong>., Szarka, A., Gandossi, B., Inglis, J. Timothy., Chua, R., (in preparation). Agonist/antagonist muscle tendon vibration improves performance in a visual-proprioceptive discrimination task during active but not passive movements.</li>
                 <li><strong>Eschelmuller, G.,</strong> Kim, H., Inglis, J.T., Chua, R., (in preparation). Dual agonist/antagonist produce biased end point with no change in variability in a kinesthetic targeting task. A manuscript to be submitted for publication in a peer-reviewed journal.</li>
@@ -195,24 +195,7 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggleButton = document.getElementById('toggle-conference');
-            var conferenceSection = document.getElementById('conference-publications');
-            
-            if (toggleButton && conferenceSection) {
-                toggleButton.addEventListener('click', function() {
-                    if (conferenceSection.classList.contains('hidden')) {
-                        conferenceSection.classList.remove('hidden');
-                        this.textContent = 'Hide Conference Publications';
-                    } else {
-                        conferenceSection.classList.add('hidden');
-                        this.textContent = 'Show Conference Publications';
-                    }
-                });
-            }
-        });
-        </script>
     <script src="js/theme.js"></script>
+    <script src="js/cv.js"></script>
 </body>
 </html>
