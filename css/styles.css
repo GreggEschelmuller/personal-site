@@ -138,13 +138,15 @@ h3 {
     margin-top: 1.5em;
 }
 
-/* Profile section */
+/* Profile section styles */
 .profile {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
+    margin: 3rem auto;
+    max-width: 800px;
 }
 
 .profile-image {
@@ -152,19 +154,25 @@ h3 {
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 20px var(--shadow-color);
-    transition: var(--transition);
-    background: transparent;
-    display: block;
-    padding: 0;
-    margin: 0;
-    border: none;
-    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
 }
 
 .profile-image:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px var(--shadow-color);
+    transform: scale(1.05);
+}
+
+.profile h2 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.profile p {
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 /* Publication cards */
