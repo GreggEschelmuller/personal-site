@@ -2,6 +2,7 @@
 :root {
     --bg-color: #f8f9fa;
     --text-color: #2d3436;
+    --text-color-secondary: #666;
     --header-bg: linear-gradient(135deg, #2c3e50, #3498db);
     --header-text: #ecf0f1;
     --nav-bg: rgba(44, 62, 80, 0.95);
@@ -10,7 +11,7 @@
     --main-bg: #ffffff;
     --border-color: #0984e3;
     --shadow-color: rgba(0,0,0,0.1);
-    --card-bg: #ffffff;
+    --card-bg-color: #ffffff;
     --transition: all 0.3s ease;
     --primary-color: #2c3e50;
 }
@@ -19,6 +20,7 @@
 [data-theme="dark"] {
     --bg-color: #1a1b1e;
     --text-color: #dfe6e9;
+    --text-color-secondary: #b2becd;
     --header-bg: linear-gradient(135deg, #2d3436, #2c3e50);
     --header-text: #dfe6e9;
     --nav-bg: rgba(45, 52, 54, 0.95);
@@ -27,7 +29,7 @@
     --main-bg: #2d3436;
     --border-color: #74b9ff;
     --shadow-color: rgba(0,0,0,0.3);
-    --card-bg: #2d3436;
+    --card-bg-color: #2d3436;
     --primary-color: #1a1b1e;
 }
 
@@ -181,7 +183,7 @@ h3 {
 }
 
 .publications-list li {
-    background: var(--card-bg);
+    background: var(--card-bg-color);
     padding: 1.5rem;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -307,7 +309,7 @@ footer {
 .blog-coming-soon {
     text-align: center;
     padding: 4rem 2rem;
-    background: var(--card-bg);
+    background: var(--card-bg-color);
     border-radius: 12px;
     box-shadow: 0 4px 20px var(--shadow-color);
     border: 1px solid rgba(0,0,0,0.1);
@@ -539,4 +541,285 @@ html {
     .social-links h3, .contact-info h3 {
         font-size: 1.1rem;
     }
+}
+
+/* Research Interests Section */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+/* Add this for better alignment with 3 cards */
+@media (min-width: 768px) {
+    .interests-grid {
+        grid-template-columns: repeat(3, minmax(250px, 300px));
+    }
+}
+
+.interest-card {
+    background-color: var(--card-bg-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    text-decoration: none;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.interest-card:after {
+    display: none;
+}
+
+.interest-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.interest-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    display: inline-flex;
+}
+
+.interest-card h3 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.interest-card p {
+    margin: 0;
+    color: var(--text-color-secondary);
+    line-height: 1.5;
+}
+
+/* Research page styles */
+.research-page {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+}
+
+.research-area {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    scroll-margin-top: 80px;
+}
+
+.research-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.research-icon {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.research-area h2 {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    color: var(--text-color);
+}
+
+.research-content p {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.coming-soon {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--border-color);
+}
+
+[data-theme="dark"] .coming-soon {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.coming-soon p {
+    margin: 0;
+    font-style: italic;
+}
+
+#proprioception, #motor-control, #sensorimotor-integration {
+    scroll-margin-top: 80px;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-toggle {
+    display: none; /* Hide by default on desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1010;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--nav-text);
+    margin: 5px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Only show mobile menu on smaller screens */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Publication filter buttons */
+.publication-filter {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: rgba(9, 132, 227, 0.05);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--link-color);
+    color: white;
+    border-color: var(--link-color);
+}
+
+/* Secondary button style */
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.btn:after {
+    display: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--link-color);
+    border: 1px solid var(--link-color);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(9, 132, 227, 0.05);
+}
+
+/* Dark mode adjustments for buttons */
+[data-theme="dark"] .filter-btn {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .filter-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .btn-secondary {
+    border-color: var(--link-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: rgba(116, 185, 255, 0.1);
+}
+
+/* Style for the header CTA button - smaller version */
+.header-cta {
+    margin-top: 1.5rem;
+}
+
+.header-cta .btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.header-cta .btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
