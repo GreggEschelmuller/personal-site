@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An introduction to Python programming for graduate students and researchers">
+    <meta name="keywords" content="python, programming, graduate school, research, coding">
+    <title>Welcome to Python (and Why You Don't Need to Be a Coder) - Gregg Eschelmuller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Add Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gregg Eschelmuller</h1>
+            <p>PhD Student at the University of British Columbia</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../cv.html">CV</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <article class="blog-post">
+            <header class="blog-post-header">
+                <h1>Welcome to Python (and Why You Don't Need to Be a Coder)</h1>
+                <div class="blog-post-meta">
+                    <time datetime="2024-03-21">March 21, 2024</time>
+                    <div class="blog-card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Programming</span>
+                        <span class="tag">Research</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="blog-post-content">
+                <p>Welcome to the first post in my Python programming series! As a PhD student in motor control and neuromechanics, I've found that learning to program has been one of the most valuable skills I've developed during my graduate studies. In this series, I'll share my journey of learning Python and how it has enhanced my research work.</p>
+
+                <h2>Why Python?</h2>
+                <p>Python has become the go-to programming language for researchers and scientists for several reasons:</p>
+                <ul>
+                    <li>Readable and intuitive syntax</li>
+                    <li>Extensive libraries for scientific computing</li>
+                    <li>Strong community support</li>
+                    <li>Cross-platform compatibility</li>
+                </ul>
+
+                <h2>How Programming Helps with Grad School Work</h2>
+                <p>In my research, I use Python for:</p>
+                <ul>
+                    <li>Data analysis and visualization</li>
+                    <li>Statistical modeling</li>
+                    <li>Automating repetitive tasks</li>
+                    <li>Processing experimental data</li>
+                    <li>Running motor control experiments with <a href="https://www.psychopy.org/" target="_blank">psychopy</a></li>
+                    <li>Building models of motor control</li>
+                </ul>
+
+                <h2>Getting Started with Python</h2>
+                <p>To begin your Python journey, you'll need to install Python on your computer. I recommend using Anaconda, which comes with many scientific computing packages pre-installed.</p>
+
+                <h3>What is Anaconda?</h3>
+                <ul>
+                    <li>Anaconda is a distribution of Python and many other packages</li>
+                    <li>You can use it to install Python and organize all the libraries you may use</li>
+                    <li>You will also use it to create virtual environments, which is a great way to manage your Python libraries</li>
+                    <li>There are other distributions of Python, but I recommend Anaconda because it's what I use and I'm familiar with it. Additionally, it is pretty straightforward to use and comes with a GUI if you are not comfortable with using your terminal</li>
+                </ul>
+
+                <h3>How to Install Anaconda</h3>
+                <ol>
+                    <li>Visit <a href="https://www.anaconda.com/download" target="_blank">Anaconda's download page</a></li>
+                    <li>Download the installer for your operating system</li>
+                    <li>Run the installer and follow the prompts</li>
+                </ol>
+
+                <h2>How to Use Your Terminal</h2>
+                <p>If you're not comfortable using the terminal, I recommend starting with <b>Anaconda Navigator</b>, a graphical interface that makes it easy to manage environments and packages. However, learning to use the terminal can be incredibly helpful. Relying solely on GUIs often means juggling multiple programs for different tasks. For instance, you'd use Anaconda Navigator to manage virtual environments, GitHub Desktop to handle repositories, and so on. By contrast, the terminal allows you to streamline your workflow and automate repetitive tasks through tools like Bash scripting, making you much more efficient in the long run.</p>
+
+                <h3>Opening the Terminal</h3>
+                <h4>Mac OS</h4>
+                <p>On Mac OS, you can open the terminal by searching for it in Spotlight or by pressing <code>Command + Space</code> and typing "terminal".</p>
+
+                <h4>Windows</h4>
+                <p>On Windows, you can open the terminal by searching for it in the start menu or by pressing <code>Windows + R</code> and typing "cmd".</p>
+                <p>However, on Windows, I would recommend using Git Bash, which is a terminal emulator that allows you to use Linux commands in Windows. You can download it <a href="https://git-scm.com/downloads/win">here</a>. You will likely want to download Git anyway, so this is a good time to set it up. To link up your Git Bash with Conda, you can follow the steps in this post <a href="https://discuss.codecademy.com/t/setting-up-conda-in-git-bash/534473">here</a>.</p>
+
+                <h4>Linux</h4>
+                <p>If you are on Linux, I am going to assume you know how to open the terminal. But do check that your Conda is installed properly (see below).</p>
+
+                <h3>Checking That Conda is Installed</h3>
+                <p>To check that Conda is installed, you can type <code>conda --version</code> in your terminal. If it is installed, you will see something like <code>conda 4.14.0</code>.</p>
+                <p>If you see something like <code>conda: command not found</code>, then check that you completed the installation steps above.</p>
+
+                <h3>Basic Terminal Commands</h3>
+                <p>Here's a simple exercise to get familiar with basic terminal commands. Try these commands in your terminal:</p>
+                
+                <pre><code class="language-shell">$ ls
+Documents  Downloads  Pictures</code></pre>
+                <p>This shows the contents of your current directory. Now let's create a new directory:</p>
+                
+                <pre><code class="language-shell">$ mkdir test
+$ ls
+Documents  Downloads  Pictures  test</code></pre>
+                <p>Notice the new 'test' directory in the list. Let's change into it:</p>
+                
+                <pre><code class="language-shell">$ cd test
+$ ls</code></pre>
+                <p>The directory is empty. Let's create a new file:</p>
+                
+                <pre><code class="language-shell">$ touch test.txt
+$ ls
+test.txt</code></pre>
+                <p>Now let's remove the file:</p>
+                
+                <pre><code class="language-shell">$ rm test.txt
+$ ls</code></pre>
+                <p>The directory is empty again. Here's a summary of what each command does:</p>
+                <ul>
+                    <li><code>ls</code> - Lists files and directories in the current location</li>
+                    <li><code>mkdir test</code> - Creates a new directory named "test"</li>
+                    <li><code>cd test</code> - Changes into the "test" directory</li>
+                    <li><code>touch test.txt</code> - Creates an empty file named "test.txt"</li>
+                    <li><code>rm test.txt</code> - Removes the file named "test.txt"</li>
+                </ul>
+
+                <h2>Creating a Virtual Environment</h2>
+                <p>A virtual environment is like a separate container for your Python project. It allows you to:</p>
+                <ul>
+                    <li>Install specific versions of Python packages without affecting other projects</li>
+                    <li>Keep your project dependencies isolated and organized</li>
+                    <li>Easily share your project setup with others</li>
+                    <li>Avoid conflicts between different projects' requirements</li>
+                </ul>
+
+                <p>Here's how to create and manage a virtual environment using Conda:</p>
+                
+                <h3>1. Create a New Environment</h3>
+                <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different!</em></p>
+
+                <pre><code class="language-shell">$ conda create -n learn-python python=3.11
+Collecting package metadata (current_repodata.json): done
+Solving environment: done
+
+## Package Plan ##
+
+  environment location: /Users/username/anaconda3/envs/learn-python
+
+The following packages will be downloaded:
+    package                    |            build
+    ---------------------------|-----------------
+    python-3.11.0             |       hb7a2778_3        21.2 MB
+    ------------------------------------------------------------
+                                           Total:        21.2 MB
+
+Proceed ([y]/n)? y
+
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done</code></pre>
+                <p>This command creates a new environment named "learn-python" with Python 3.11 installed. The prompt will ask for confirmation before proceeding.</p>
+
+                <h3>2. Activate the Environment</h3>
+                <pre><code class="language-shell">$ conda activate learn-python
+(learn-python) $</code></pre>
+                <p>Notice how the prompt changes to show the active environment name in parentheses. This indicates you're now working within the "learn-python" environment.</p>
+
+                <h3>3. Verify Your Environment</h3>
+                <pre><code class="language-shell">(learn-python) $ python --version
+Python 3.11.0
+(learn-python) $ conda list
+# packages in environment at /Users/username/anaconda3/envs/learn-python:
+#
+# Name                    Version                   Build  Channel
+python                    3.11.0               hb7a2778_3</code></pre>
+                <p>These commands confirm you're using the correct Python version and show the installed packages.</p>
+
+                <h3>4. Deactivate When Done</h3>
+                <pre><code class="language-shell">(learn-python) $ conda deactivate
+$</code></pre>
+                <p>When you're finished working, you can deactivate the environment to return to your base environment.</p>
+
+                <h3>Additional Tips</h3>
+                <ul>
+                    <li>To see all your environments: <code>conda env list</code></li>
+                    <li>To remove an environment: <code>conda env remove -n learn-python</code></li>
+                    <li>To update all packages: <code>conda update --all</code></li>
+                </ul>
+
+                <p>Now that you have your environment set up, you're ready to start coding! Let's move on to some basic Python syntax.</p>
+
+                <h2>Installing a text editor/IDE</h2>
+                <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and √sticking with it while you are learning, as you want to focus on learning python, not figuring out how to use a new text editor.</p>
+        </p>Here is a list of some other popular text editors/IDEs:
+                <ul>
+                    <li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></li>
+                    <li><a href="https://www.jetbrains.com/dataspell/" target="_blank">DataSpell</a></li>
+                    <li><a href="https://docs.spyder-ide.org/current/index.html" target="_blank">Spyder</a></li>
+                </ul>
+
+                <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in python as good as VS Code. But if you want to use it, you can use conda to install it. Just run <code>conda install -c conda-forge jupyterlab</code> in your terminal for the envinronment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it the same as other packages/libraries.Then to launch jupyter lab, you can type <code>jupyter lab</code> in your terminal (make sure you are in the environment that has jupyterlab installed).
+                </p>
+
+                <h2>Basic Python Syntax</h2>
+                <p>Let's start with some fundamental concepts:</p>
+
+                <h3>Variables and Data Types</h3>
+                <pre><code class="language-python">
+# Variables can store different types of data
+name = "Gregg"  # String
+age = 28        # Integer
+height = 1.75   # Float
+is_student = True  # Boolean
+
+# Print variables
+print(f"My name is {name} and I am {age} years old")
+                </code></pre>
+
+                <h3>Comments</h3>
+                <pre><code class="language-python">
+# This is a single-line comment
+"""
+This is a multi-line comment
+It can span multiple lines
+"""
+                </code></pre>
+
+                <h2>Keeping It Low-Stakes and Experimental</h2>
+                <p>Remember that learning to program is a journey, and it's okay to make mistakes. Here are some tips for success:</p>
+                <ul>
+                    <li>Start with small, manageable projects</li>
+                    <li>Use online resources and documentation</li>
+                    <li>Practice regularly, even if it's just 15 minutes a day</li>
+                    <li>Don't be afraid to experiment and break things</li>
+                </ul>
+
+                <p>In the next post, we'll dive deeper into Python's data structures and control flow. Stay tuned!</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> <a href="mailto:gregg.eschelmuller@ubc.ca">gregg.eschelmuller@ubc.ca</a></p>
+                </div>
+                <div class="social-links">
+                    <h3>Connect with Me</h3>
+                    <div class="social-icons">
+                        <a href="https://x.com/GreggEsche" target="_blank" rel="noopener noreferrer" class="social-icon twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2024 Gregg Eschelmuller. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../js/theme.js"></script>
+</body>
+</html> 
