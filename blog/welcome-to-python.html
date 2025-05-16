@@ -50,9 +50,8 @@
     <main class="container">
         <article class="blog-post">
             <header class="blog-post-header">
-                <h1>Welcome to Python (and Why You Don't Need to Be a Coder)</h1>
+                <h1>Learning Python for research (Part I)</h1>
                 <div class="blog-post-meta">
-                    <time datetime="2024-03-21">March 21, 2024</time>
                     <div class="blog-card-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Programming</span>
@@ -121,11 +120,11 @@
                 <p>If you see something like <code>conda: command not found</code>, then check that you completed the installation steps above.</p>
 
                 <h3>Basic Terminal Commands</h3>
-                <p>Here's a simple exercise to get familiar with basic terminal commands. Try these commands in your terminal:</p>
+                <p>If you want to learn about your terminal, you can start here <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">here</a>. But here are a few a simple exercises to get familiar with basic terminal commands. Try these commands in your terminal:</p>
                 
                 <pre><code class="language-shell">$ ls
 Documents  Downloads  Pictures</code></pre>
-                <p>This shows the contents of your current directory. Now let's create a new directory:</p>
+                <p>The command <code>ls</code> shows the contents of your current directory. Now let's create a new directory using the command <code>mkdir</code>:</p>
                 
                 <pre><code class="language-shell">$ mkdir test
 $ ls
@@ -165,7 +164,7 @@ $ ls</code></pre>
                 
                 <h3>1. Create a New Environment</h3>
                 <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different!</em></p>
-
+                <p>First, you will need to create a new environment. You can do this by running the following command: <code>conda create -n learn-python python=3.11</code></p>. 
                 <pre><code class="language-shell">$ conda create -n learn-python python=3.11
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -189,11 +188,13 @@ Executing transaction: done</code></pre>
                 <p>This command creates a new environment named "learn-python" with Python 3.11 installed. The prompt will ask for confirmation before proceeding.</p>
 
                 <h3>2. Activate the Environment</h3>
+                <p>Now that you have created an environment, you can activate it by running the following command: <code>conda activate learn-python</code></p>
                 <pre><code class="language-shell">$ conda activate learn-python
 (learn-python) $</code></pre>
                 <p>Notice how the prompt changes to show the active environment name in parentheses. This indicates you're now working within the "learn-python" environment.</p>
 
                 <h3>3. Verify Your Environment</h3>
+                <p>You can verify that you are using the correct Python version by running the following command: <code>python --version</code></p>
                 <pre><code class="language-shell">(learn-python) $ python --version
 Python 3.11.0
 (learn-python) $ conda list
@@ -204,9 +205,9 @@ python                    3.11.0               hb7a2778_3</code></pre>
                 <p>These commands confirm you're using the correct Python version and show the installed packages.</p>
 
                 <h3>4. Deactivate When Done</h3>
+                <p>When you're finished working, you can deactivate the environment to return to your base environment using the command <code>conda deactivate</code>.</p>
                 <pre><code class="language-shell">(learn-python) $ conda deactivate
 $</code></pre>
-                <p>When you're finished working, you can deactivate the environment to return to your base environment.</p>
 
                 <h3>Additional Tips</h3>
                 <ul>
@@ -218,7 +219,7 @@ $</code></pre>
                 <p>Now that you have your environment set up, you're ready to start coding! Let's move on to some basic Python syntax.</p>
 
                 <h2>Installing a text editor/IDE</h2>
-                <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and √sticking with it while you are learning, as you want to focus on learning python, not figuring out how to use a new text editor.</p>
+                <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and sticking with it while you are learning, as you want to focus on learning python, not figuring out how to use a new text editor.</p>
         </p>Here is a list of some other popular text editors/IDEs:
                 <ul>
                     <li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></li>
@@ -226,11 +227,20 @@ $</code></pre>
                     <li><a href="https://docs.spyder-ide.org/current/index.html" target="_blank">Spyder</a></li>
                 </ul>
 
-                <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in python as good as VS Code. But if you want to use it, you can use conda to install it. Just run <code>conda install -c conda-forge jupyterlab</code> in your terminal for the envinronment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it the same as other packages/libraries.Then to launch jupyter lab, you can type <code>jupyter lab</code> in your terminal (make sure you are in the environment that has jupyterlab installed).
+                <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in python as good as VS Code or PyCharm/DataSpell. But if you want to use it, you can use conda to install it. Just run <code>conda install -c conda-forge jupyterlab</code> in your terminal for the envinronment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it the same as other packages/libraries.Then to launch jupyter lab, you can type <code>jupyter lab</code> in your terminal (make sure you are in the environment that has jupyterlab installed). Jupyterlab will then open in your default browser.
                 </p>
+                
 
                 <h2>Basic Python Syntax</h2>
-                <p>Let's start with some fundamental concepts:</p>
+                <p>Now that you have your environment set up and a text editor/IDE installed, you can start coding! First open an new file in your text editor/IDE and save it as <code>hello_world.py</code>. Now open that file in your text editor/IDE and you will see a blank screen. Hello world is a traditional first program to write when learning a new programming language, so let's write that first. In your .py file, write the following code:</p>
+                <pre><code class="language-python">
+print("Hello, world!")
+                </code></pre>
+                <p>Now, you can run the program by clicking the run button in your text editor/IDE. Or you can run it in your terminal by typing <code>python hello_world.py</code> and pressing enter. If you are in the environment you created earlier, you should see the following output:</p>
+                <pre><code class="language-shell">
+Hello, world!
+                </code></pre>
+                <p>Congratulations! You have just written your first Python program. Now let's move on to some more fundamental concepts.</p>
 
                 <h3>Variables and Data Types</h3>
                 <pre><code class="language-python">
