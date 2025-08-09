@@ -121,25 +121,25 @@
 
                 <h3>Basic Terminal Commands</h3>
                 <p>If you want to learn about your terminal, you can start here <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">here</a>. But here are a few a simple exercises to get familiar with basic terminal commands. Try these commands in your terminal:</p>
-                
+
                 <pre><code class="language-shell">$ ls
 Documents  Downloads  Pictures</code></pre>
                 <p>The command <code>ls</code> shows the contents of your current directory. Now let's create a new directory using the command <code>mkdir</code>:</p>
-                
+
                 <pre><code class="language-shell">$ mkdir test
 $ ls
 Documents  Downloads  Pictures  test</code></pre>
                 <p>Notice the new 'test' directory in the list. Let's change into it:</p>
-                
+
                 <pre><code class="language-shell">$ cd test
 $ ls</code></pre>
                 <p>The directory is empty. Let's create a new file:</p>
-                
+
                 <pre><code class="language-shell">$ touch test.txt
 $ ls
 test.txt</code></pre>
                 <p>Now let's remove the file:</p>
-                
+
                 <pre><code class="language-shell">$ rm test.txt
 $ ls</code></pre>
                 <p>The directory is empty again. Here's a summary of what each command does:</p>
@@ -161,10 +161,10 @@ $ ls</code></pre>
                 </ul>
 
                 <p>Here's how to create and manage a virtual environment using Conda:</p>
-                
+
                 <h3>1. Create a New Environment</h3>
                 <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different! Most of the text I have added here was simplified for ease.</em></p>
-                <p>First, you will need to create a new environment. You can do this by running the following command: <code>conda create -n learn-python python=3.11</code></p>. 
+                <p>First, you will need to create a new environment. You can do this by running the following command: <code>conda create -n learn-python python=3.11</code></p>.
                 <pre><code class="language-shell">$ conda create -n learn-python python=3.11
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -223,7 +223,7 @@ $</code></pre>
 
                 <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in python as good as VS Code or PyCharm/DataSpell. But if you want to use it, you can use conda to install it. Just run <code>conda install -c conda-forge jupyterlab</code> in your terminal for the envinronment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it the same as other packages/libraries.Then to launch jupyter lab, you can type <code>jupyter lab</code> in your terminal (make sure you are in the environment that has jupyterlab installed). Jupyterlab will then open in your default browser.
                 </p>
-                
+
 
                 <h2>Basic Python Syntax</h2>
                 <p>Now that you have your environment set up and a text editor/IDE installed, you can start coding! First open an new file in your text editor/IDE and save it as <code>hello_world.py</code>. Now open that file in your text editor/IDE and you will see a blank screen. Hello world is a traditional first program to write when learning a new programming language, so let's write that first. In your .py file, write the following code:</p>
@@ -313,4 +313,4 @@ e = 2 ** 3  # e is now 8
     </footer>
     <script src="../js/theme.js"></script>
 </body>
-</html> 
+</html>
