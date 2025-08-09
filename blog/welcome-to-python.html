@@ -163,7 +163,7 @@ $ ls</code></pre>
                 <p>Here's how to create and manage a virtual environment using Conda:</p>
                 
                 <h3>1. Create a New Environment</h3>
-                <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different!</em></p>
+                <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different! Most of the text I have added here was simplified for ease.</em></p>
                 <p>First, you will need to create a new environment. You can do this by running the following command: <code>conda create -n learn-python python=3.11</code></p>. 
                 <pre><code class="language-shell">$ conda create -n learn-python python=3.11
 Collecting package metadata (current_repodata.json): done
@@ -219,13 +219,7 @@ $</code></pre>
                 <p>Now that you have your environment set up, you're ready to start coding! Let's move on to some basic Python syntax.</p>
 
                 <h2>Installing a text editor/IDE</h2>
-                <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and sticking with it while you are learning, as you want to focus on learning python, not figuring out how to use a new text editor.</p>
-        </p>Here is a list of some other popular text editors/IDEs:
-                <ul>
-                    <li><a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a></li>
-                    <li><a href="https://www.jetbrains.com/dataspell/" target="_blank">DataSpell</a></li>
-                    <li><a href="https://docs.spyder-ide.org/current/index.html" target="_blank">Spyder</a></li>
-                </ul>
+                <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> or <a href="https://www.jetbrains.com/pycharm/" target="_blank"> PyCharm</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and sticking with it while you are learning, as you want to focus on learning python, not figuring out how to use a new text editor.</p>
 
                 <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in python as good as VS Code or PyCharm/DataSpell. But if you want to use it, you can use conda to install it. Just run <code>conda install -c conda-forge jupyterlab</code> in your terminal for the envinronment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it the same as other packages/libraries.Then to launch jupyter lab, you can type <code>jupyter lab</code> in your terminal (make sure you are in the environment that has jupyterlab installed). Jupyterlab will then open in your default browser.
                 </p>
@@ -261,6 +255,29 @@ print(f"My name is {name} and I am {age} years old")
 This is a multi-line comment
 It can span multiple lines
 """
+                </code></pre>
+
+                <h3>Python as a calculator</h3>
+                <pre><code class="language-python">
+# addition and subtraction
+x = 5 + 7   # x is now 12
+y = 10 - 4  # y is now 6
+z = x + y   # z is now 18
+
+# multiplication
+a = 3 * 4   # a is now 12
+
+# division
+b = 15 / 3  # b is now 5.0 (result is always a float)
+
+# floor division
+c = 15 // 2 # c is now 7 (integer division)
+
+# modulus (remainder)
+d = 15 % 4  # d is now 3
+
+# exponentiation
+e = 2 ** 3  # e is now 8
                 </code></pre>
 
                 <h2>Keeping It Low-Stakes and Experimental</h2>
