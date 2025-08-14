@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learning Python for research — Part II: data structures and control flow">
+    <meta name="keywords" content="python, programming, research, data structures, control flow">
+    <title>Learning Python for Research (Part II) — Data Structures & Control Flow - Gregg Eschelmuller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Prism.js for syntax highlighting -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Gregg Eschelmuller</h1>
+        <p>PhD Student at the University of British Columbia</p>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../cv.html">CV</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    <article class="blog-post">
+        <header class="blog-post-header">
+            <h1>Learning Python for Research (Part II) — Data Structures & Control Flow</h1>
+            <div class="blog-post-meta">
+                <div class="blog-card-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Programming</span>
+                    <span class="tag">Research</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="blog-post-content">
+            <p>Welcome back! In <a href="part1.html">Part I</a>, we got your Python environment set up, ran our first script, and covered some basic syntax. Now that you’ve got the tools in place, it’s time to dive into the core building blocks you’ll use in almost every research project: Python’s built-in data structures, control flow, and small functions.</p>
+
+            <p>These concepts form the “grammar” of Python — the ways you can store information, repeat actions, make decisions, and package your code. Once you’re comfortable with these, you’ll be ready to take full advantage of scientific libraries like NumPy and Pandas in Part III.</p>
+
+            <h2>Why This Matters for Research</h2>
+            <p>Even without a single external library, Python can already help you do meaningful work in research. You can:</p>
+            <ul>
+                <li>Store participant IDs, trial results, and metadata</li>
+                <li>Loop through hundreds of trials without manual repetition</li>
+                <li>Automate decision-making (e.g., flag bad trials automatically)</li>
+                <li>Write helper functions so you never repeat the same chunk of code by hand</li>
+            </ul>
+            <p>Think of this as learning to work with the “bare hands” of Python. Later, scientific tools will act like power tools — but they still rely on the same basic skills you’re learning here.</p>
+
+            <h2>Lists — Ordered Collections</h2>
+            <p>Lists are one of the most common ways to store multiple items in Python. They’re ordered, which means items keep their position, and they’re flexible — you can add, remove, and change them at will. In research, you might keep a list of participant IDs, stimulus names, or data files to process.</p>
+            <pre><code class="language-python">participants = ["P001", "P002", "P003"]
+
+# Access by index (count starts at 0)
+print(participants[0])   # P001
+print(participants[-1])  # P003 (last item)
+
+# Add a new participant
+participants.append("P004")
+
+# Remove a participant
+participants.remove("P002")
+
+# Loop over them
+for pid in participants:
+    print(pid)
+</code></pre>
+
+            <p>Lists aren’t just for strings — they can hold numbers, booleans, or even other lists:</p>
+            <pre><code class="language-python"># List of trial accuracies
+accuracies = [0.91, 0.85, 0.88]
+
+# List of lists — participant ID and their accuracies
+data = [
+    ["P001", [0.91, 0.85, 0.88]],
+    ["P002", [0.75, 0.80, 0.78]]
+]
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Create a list of your top 5 favourite research tools or software.</li>
+                <li>Add a new item to the list, then remove one.</li>
+                <li>Print each item with its position number (hint: use <code>enumerate()</code>).</li>
+            </ul>
+
+            <h2>Tuples — Lists That Can’t Change</h2>
+            <p>Tuples are like lists, but immutable — once you make one, it can’t be changed. They’re great for storing fixed information, like coordinates, or function return values that shouldn’t be modified by mistake.</p>
+            <pre><code class="language-python">origin = (0, 0)  # x, y coordinates
+print(origin[0])  # 0
+
+# Tuple unpacking
+x, y = origin
+print(f"x: {x}, y: {y}")
+</code></pre>
+
+            <p>Tuples can also be used when returning multiple values from a function:</p>
+            <pre><code class="language-python">def min_and_max(values):
+    return (min(values), max(values))
+
+result = min_and_max([3, 7, 1, 5])
+print(result)       # (1, 7)
+low, high = result
+print(low, high)    # 1 7
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Create a tuple that stores today’s date as (year, month, day).</li>
+                <li>Use tuple unpacking to print it in “day/month/year” format.</li>
+            </ul>
+
+            <h2>Dictionaries — Key/Value Mappings</h2>
+            <p>Dictionaries store data as key/value pairs. Think of them like labeled boxes: the “key” is the label, and the “value” is what’s inside. They’re perfect for mapping IDs to results, condition names to settings, or filenames to their metadata.</p>
+            <pre><code class="language-python">results = {
+    "P001": [0.52, 0.48, 0.56],
+    "P002": [0.61, 0.59, 0.63],
+}
+print(results["P001"])  # [0.52, 0.48, 0.56]
+
+# Add a new participant
+results["P003"] = [0.70, 0.65, 0.72]
+
+# Loop through dictionary
+for pid, scores in results.items():
+    print(pid, scores)
+</code></pre>
+
+            <p>You can also check if a key exists before using it:</p>
+            <pre><code class="language-python">if "P004" not in results:
+    results["P004"] = [0.80, 0.82, 0.78]
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Create a dictionary mapping 3 country names to their capital cities.</li>
+                <li>Add a new country/capital pair.</li>
+                <li>Loop through the dictionary and print “The capital of X is Y”.</li>
+            </ul>
+
+            <h2>Sets — Unique Values Only</h2>
+            <p>Sets store unordered, unique items. If you need to remove duplicates from a dataset or just check whether something is present, sets can save you a lot of time.</p>
+            <pre><code class="language-python">conditions = {"A", "B", "C", "A"}
+print(conditions)  # {'A', 'B', 'C'} — duplicates removed
+
+# Membership test
+print("A" in conditions)  # True
+print("D" in conditions)  # False
+</code></pre>
+
+            <p>Converting a list to a set is a quick way to deduplicate it:</p>
+            <pre><code class="language-python">participants = ["P001", "P002", "P002", "P003"]
+unique_participants = set(participants)
+print(unique_participants)  # {'P001', 'P002', 'P003'}
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Create a list with repeated numbers.</li>
+                <li>Convert it to a set to remove duplicates.</li>
+                <li>Check if a specific number is in the set.</li>
+            </ul>
+
+            <h2>Control Flow — Making Your Code Think</h2>
+            <h3>If / elif / else</h3>
+            <p>Use these to branch your code based on conditions. In research, this might mean adjusting difficulty based on performance or flagging poor-quality data.</p>
+            <pre><code class="language-python">accuracy = 0.82
+
+if accuracy > 0.9:
+    print("Excellent performance!")
+elif accuracy > 0.75:
+    print("Good performance!")
+else:
+    print("Needs improvement.")
+</code></pre>
+
+            <h3>Loops</h3>
+            <p>Loops let you repeat actions without writing the same code over and over.</p>
+            <pre><code class="language-python"># For loop — runs a set number of times
+for trial in range(1, 6):
+    print(f"Trial {trial}")
+
+# While loop — runs until a condition is false
+countdown = 3
+while countdown > 0:
+    print(countdown)
+    countdown -= 1
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Write an if/elif/else statement that prints different feedback based on a variable called <code>score</code>.</li>
+                <li>Write a for loop that prints all even numbers from 2 to 20.</li>
+                <li>Write a while loop that counts down from 5 to 1.</li>
+            </ul>
+
+            <h2>Functions — Reusable Code Blocks</h2>
+            <p>Functions package your code into named, reusable pieces. This keeps your scripts tidy and makes it easier to test and debug individual parts.</p>
+            <pre><code class="language-python">def mean(values):
+    return sum(values) / len(values)
+
+rt_list = [350, 420, 390]
+print(mean(rt_list))  # 386.666...
+</code></pre>
+
+            <p>You can also add default parameters:</p>
+            <pre><code class="language-python">def greet(name, greeting="Hello"):
+    print(f"{greeting}, {name}!")
+
+greet("Gregg")           # Hello, Gregg!
+greet("Gregg", "Hi")     # Hi, Gregg!
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Write a function that returns the square of a number.</li>
+                <li>Write a function that takes a list of numbers and returns the largest one.</li>
+                <li>Write a function with a default parameter, then call it with and without providing that parameter.</li>
+            </ul>
+
+            <h2>Mini-Project: Participant Performance Tracker</h2>
+            <p>Let’s tie everything together with a small example that doesn’t require any extra files.</p>
+
+            <pre><code class="language-python">def mean(values):
+    return sum(values) / len(values)
+
+# Participant accuracy data (each list is a set of trial accuracies)
+results = {
+    "P001": [0.9, 0.8, 0.85],
+    "P002": [0.7, 0.75, 0.72],
+    "P003": [0.95, 0.92, 0.94]
+}
+
+# Loop through each participant and print their mean accuracy
+for pid, accs in results.items():
+    avg_acc = mean(accs)
+    if avg_acc > 0.9:
+        performance = "Excellent"
+    elif avg_acc > 0.75:
+        performance = "Good"
+    else:
+        performance = "Needs improvement"
+    print(f"{pid}: {avg_acc:.2f} — {performance}")
+</code></pre>
+
+            <h3>Try it yourself:</h3>
+            <ul>
+                <li>Add another participant with their own accuracy scores.</li>
+                <li>Write a new function that returns the highest single accuracy for a participant.</li>
+                <li>Sort participants by their average accuracy and print them from highest to lowest.</li>
+            </ul>
+
+            <p>That’s it for Part II. In Part III, we’ll bring in NumPy, Pandas, and Matplotlib to handle larger datasets and create clean figures with minimal fuss.</p>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><strong>Email:</strong> <a href="mailto:gregg.eschelmuller@ubc.ca">gregg.eschelmuller@ubc.ca</a></p>
+            </div>
+            <div class="social-links">
+                <h3>Connect with Me</h3>
+                <div class="social-icons">
+                    <a href="https://x.com/GreggEsche" target="_blank" rel="noopener noreferrer" class="social-icon twitter">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Gregg Eschelmuller. All rights reserved.</p>
+    </div>
+</footer>
+<script src="../js/theme.js"></script>
+</body>
+</html>
