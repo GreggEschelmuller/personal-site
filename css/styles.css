@@ -1003,3 +1003,17 @@ code {
     background-color: #2d3436;
     color: #ff79c6;
 }
+
+.footer-credits p {
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+    margin-top: 1rem;
+}
+.footer-credits a {
+    color: inherit;   /* keeps it same subtle gray */
+    text-decoration: none;
+}
+.footer-credits a:hover {
+    text-decoration: underline;
+}
