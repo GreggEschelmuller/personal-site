@@ -25,9 +25,10 @@
             </button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="research.html">Research</a></li>
+                <li><a href="tech-resume.html">Tech Resume</a></li>
+                <li><a href="research.html">Research Projects</a></li>
                 <li><a href="blog.html">Blog</a></li>
+                <li><a href="cv.html">CV (Academic)</a></li>
                 <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
                     <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -54,7 +55,14 @@
             <p>Thoughts and insights on neuromechanics, motor control, and research life.</p>
         </section>
 
-        <section class="blog-posts">
+        <section class="blog-filters">
+            <div class="search-box">
+                <input type="search" id="blog-search" placeholder="Search posts..." aria-label="Search blog posts">
+            </div>
+            <div class="tag-filters" id="tag-filters" aria-label="Filter posts by tag"></div>
+        </section>
+
+        <section class="blog-posts" id="blog-posts">
             <article class="blog-card">
                 <div class="blog-card-content">
                     <h2><a href="blog/welcome-to-python.html">Learning Python for research (Part I)</a></h2>
@@ -66,25 +74,25 @@
                             <span class="tag">Research</span>
                         </div>
                     </div>
-                    <p>An introduction to Python programming for graduate students and researchers, exploring why Python is valuable for academic work and how to get started.</p>
+                    <p class="blog-excerpt">An introduction to Python programming for graduate students and researchers, exploring why Python is valuable for academic work and how to get started.</p>
                     <a href="blog/welcome-to-python.html" class="read-more">Read More →</a>
                 </div>
             </article>
-<!--            <article class="blog-card">-->
-<!--                <div class="blog-card-content">-->
-<!--                    <h2><a href="blog/welcome-to-python-2.html">Learning Python for research (Part II)</a></h2>-->
-<!--                    <div class="blog-card-meta">-->
-<!--                        <time datetime="2024-04-05">April 5, 2024</time>-->
-<!--                        <div class="blog-card-tags">-->
-<!--                            <span class="tag">Python</span>-->
-<!--                            <span class="tag">Programming</span>-->
-<!--                            <span class="tag">Research</span>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <p>Learn Python’s built-in data structures, control flow, and functions — the core tools for storing, organizing, and processing research data efficiently.</p>-->
-<!--                    <a href="blog/welcome-to-python-2.html" class="read-more">Read More →</a>-->
-<!--                </div>-->
-<!--            </article>-->
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <h2><a href="blog/welcome-to-python-2.html">Learning Python for research (Part II)</a></h2>
+                    <div class="blog-card-meta">
+                        <time datetime="2024-04-05">April 5, 2024</time>
+                        <div class="blog-card-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Programming</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                    <p class="blog-excerpt">Explore Python’s built-in data structures, control flow, and functions, and see how to use them to automate common research analysis tasks.</p>
+                    <a href="blog/welcome-to-python-2.html" class="read-more">Read More →</a>
+                </div>
+            </article>
         </section>
     </main>
 
@@ -94,7 +102,7 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>Gregg Eschelmuller</h3>
-                    <p>Researcher at UBC investigating human movement and proprioception..</p>
+                    <p>Researcher at UBC investigating human movement and proprioception.</p>
                 </div>
                 <div class="contact-info">
                     <h3>Contact Information</h3>

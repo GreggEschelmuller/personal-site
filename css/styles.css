@@ -311,6 +311,72 @@ footer {
     margin-bottom: 1rem;
 }
 
+.blog-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    box-shadow: 0 2px 10px var(--shadow-color);
+    transition: var(--transition);
+}
+
+.search-box input:focus {
+    border-color: var(--link-color);
+    outline: none;
+    box-shadow: 0 4px 16px var(--shadow-color);
+}
+
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-filter {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: transparent;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tag-filter:hover {
+    background-color: rgba(9, 132, 227, 0.1);
+    transform: translateY(-2px);
+}
+
+.tag-filter:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.25);
+}
+
+[data-theme="dark"] .search-box input {
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .tag-filter {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .tag-filter:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
 .blog-posts {
     display: grid;
     gap: 2rem;
@@ -1016,4 +1082,99 @@ code {
 }
 .footer-credits a:hover {
     text-decoration: underline;
+}
+
+/* --- Styles for Tech-Focused Revamp --- */
+
+/* New Technical Skills Section */
+.technical-skills {
+    padding: 2rem 0;
+}
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+.skill-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px var(--shadow-color);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .skill-card {
+    border-color: rgba(255,255,255,0.1);
+}
+.skill-card h3 {
+    margin: 0 0 0.5rem;
+    color: var(--link-color);
+    font-size: 1.2rem;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+.skill-card p {
+    margin: 0;
+    color: var(--text-color-secondary);
+    line-height: 1.5;
+}
+
+/* Tech Resume Page */
+.tech-resume-page .page-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+    color: var(--text-color-secondary);
+}
+.tech-resume-section {
+    margin-bottom: 3rem;
+}
+.tech-resume-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Project Cards */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.project-card {
+    background: var(--card-bg-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow-color);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+[data-theme="dark"] .project-card {
+    border-color: rgba(255,255,255,0.1);
+}
+.project-card h3 {
+    margin: 0 0 0.75rem;
+    padding: 0;
+    border-bottom: none;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+.project-card p {
+    color: var(--text-color-secondary);
+    line-height: 1.6;
+    flex-grow: 1; /* Makes card content fill space */
+}
+.project-card .btn-secondary {
+    margin-top: 1rem;
+}
+
+/* Project links on Research Page */
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.project-links .btn {
+    font-size: 0.9rem;
 }

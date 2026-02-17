@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gregg Eschelmuller - Tech Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Gregg Eschelmuller</h1>
+            <p>PhD Candidate in Neuromechanics | Researcher & Engineer</p>
+            <div class="header-cta">
+                <a href="mailto:g.eschelmuller@gmail.com" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tech-resume.html">Tech Resume</a></li>
+                <li><a href="research.html">Research Projects</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="cv.html">CV (Academic)</a></li>
+                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" ...></svg>
+                    <svg class="moon-icon" ...></svg>
+                </button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container tech-resume-page">
+        <h1>Tech Resume</h1>
+        <p class="page-intro">My experience structured for a tech, neurotech, or R&D role. <a href="[LINK_TO_YOUR_PDF_RESUME_HERE]" class="btn btn-secondary">Download PDF Version</a></p>
+
+        <section class="tech-resume-section">
+            <h2>Technical Toolkit</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <p>Python, MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Data Science & ML</h3>
+                    <p>Pandas, NumPy, SciPy, Scikit-learn, PyTorch, Statsmodels</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Hardware & Neuro</h3>
+                    <p>NI-DAQmx, PsychoPy, Biomechanical/EMG Signal Processing, Spike2</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, Jupyter</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="tech-resume-section">
+            <h2>Pillar Projects</h2>
+            <p>My core portfolio pieces, translating my PhD research into industry-ready applications.</p>
+            <div class="project-grid">
+                <article class="project-card">
+                    <h3>Pillar 1: Real-Time Hardware Platform</h3>
+                    <p>A "human-in-the-loop" experimental platform built in Python. This application integrates NI-DAQ hardware (for data acquisition), PsychoPy (for visual stimulus), and real-time signal processing (for online feedback) into a robust, event-driven system.</p>
+                    <a href="[LINK_TO_YOUR_GITHUB_REPO_1]" class="btn btn-secondary">View on GitHub</a>
+                </article>
+                <article class="project-card">
+                    <h3>Pillar 2: Bayesian Model of Proprioception</h3>
+                    <p>A computational model (built with PyMC/Statsmodels) that translates my core PhD research. It models sensory illusions as a rational Bayesian cue combination problem, successfully predicting human motor errors under noisy sensory feedback.</p>
+                    <a href="[LINK_TO_YOUR_GITHUB_REPO_2]" class="btn btn-secondary">View on GitHub</a>
+                </article>
+                <article class="project-card">
+                    <h3>Pillar 3: State-Space & Cue Combination Model</h3>
+                    <p>My final project for an advanced Bayesian modeling course. This project uses a state-space model to explain proprioceptive drift through optimal cue combination and sensorimotor learning, demonstrating a grasp of core ML theory.</p>
+                    <a href="[LINK_TO_YOUR_GITHUB_REPO_3]" class="btn btn-secondary">View on GitHub</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="tech-resume-section">
+            <h2>Education & Specialized Training</h2>
+            <ul>
+                <li><strong>PhD Kinesiology (Neuromechanics)</strong> - University of British Columbia (Expected 2025/26)</li>
+                <li><strong>Neurotech Microcredential</strong> - NeuroTech Microcredential Program (In Progress, 2025)</li>
+                <li><strong>Neuromatch Academy (Computational Neuroscience)</strong> - Completed Interactive Track & Project (2022)</li>
+                <li><strong>M.Sc. Kinesiology (Neuromechanics)</strong> - University of British Columbia (2021)</li>
+                <li><strong>B.Kin. Kinesiology</strong> - University of British Columbia (2018)</li>
+            </ul>
+        </section>
+
+        <section class="tech-resume-section">
+            <h2>Teaching & Leadership Experience</h2>
+            <ul>
+                <li><strong>Sessional Instructor</strong> (KIN 131, KINE 103, KINE 230) at UBC & Capilano University</li>
+                <li><strong>Teaching Assistant Mentor</strong>: Mentored new TAs in the School of Kinesiology.</li>
+                <li>**PhD Representative, School of Kinesiology (2022–2023):** Acted as liaison between PhD students and faculty.</li>
+            </ul>
+        </section>
+
+        <section class="tech-resume-section">
+            <h2>Selected Publications</h2>
+            <p>For a full list, please see my <a href="cv.html">Academic CV</a>.</p>
+             <ul class="publications-list">
+                <li><strong>Eschelmuller, G.,</strong> et al. (2025). Dual agonist and antagonist muscle vibration produces a bias... <i>Experimental Brain Research</i>.</li>
+                <li><strong>Eschelmuller, G</strong>., et al. (2023). The effects of periodic and noisy tendon vibration on a kinesthetic targeting task. <i>Experimental Brain Research</i>.</li>
+                <li><strong>Eschelmuller, G.,</strong> et al. (2021). The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. <i>Neuroscience Letters</i>.</li>
+                <li><strong>Eschelmuller, G.</strong>, et al. (2020). Frequency characteristics of heteronymous responses evoked by Achilles tendon vibration... <i>Neuroscience Letters</i>.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>...</footer>
+    
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
