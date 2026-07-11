@@ -28,8 +28,8 @@
         <nav aria-label="Primary navigation">
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html?v=dcc42f8">About</a></li>
-                <li><a href="../research.html?v=dcc42f8">Research</a></li>
+                <li><a href="../about.html?v=20260711c">About</a></li>
+                <li><a href="../research.html?v=20260711c">Research</a></li>
                 <li><a href="../teaching.html">Teaching</a></li>
                 <li><a href="../applied-work.html">Applied Work</a></li>
                 <li><a href="../blog.html" aria-current="page">Writing</a></li>
@@ -57,7 +57,7 @@
             <p>I came to Python later than I probably should have. My lab ran most things in MATLAB, and for the first couple of years I just went along with that. Then I started building experiments that needed real-time feedback loops and hardware interfacing, and MATLAB started feeling like a real headache. This series is basically the guide I wish I had when I was starting out.</p>
 
             <h2>Why Python?</h2>
-            <p>Python gets recommended constantly, to the point where it almost sounds like hype. But the reasons are real: the scientific ecosystem (NumPy, SciPy, Pandas, PyTorch) is mature, the syntax is readable enough that you can come back to old code and actually understand it, and if you have a problem someone else has almost certainly already solved it and posted it somewhere. For a researcher, that last one matters more than people realize.</p>
+            <p>Python gets recommended constantly, to the point where it almost sounds like hype. Some of the praise is earned. The scientific ecosystem is mature, the syntax is readable enough that old code is usually still understandable, and if you hit a problem, someone else has probably hit it too. For research work, that matters.</p>
 
             <h2>How Programming Helps with Research Workflows</h2>
             <p>In my research, I use Python for:</p>
@@ -71,14 +71,14 @@
             </ul>
 
             <h2>Getting Started with Python</h2>
-            <p>To begin your Python journey, you'll need to install Python on your computer. I recommend using Anaconda, which comes with many scientific computing packages pre-installed.</p>
+            <p>First you need Python on your computer. I recommend Anaconda because it comes with many scientific computing packages already set up.</p>
 
             <h3>What is Anaconda?</h3>
             <ul>
                 <li>Anaconda is a distribution of Python and many other packages</li>
                 <li>You can use it to install Python and organize all the libraries you may use</li>
                 <li>You will also use it to create virtual environments, which is a great way to manage your Python libraries</li>
-                <li>There are other distributions of Python, but I recommend Anaconda because it's what I use and I'm familiar with it. Additionally, it is pretty straightforward to use and comes with a GUI if you are not comfortable with using your terminal</li>
+                <li>There are other Python distributions. I recommend Anaconda here because I use it, I know its quirks, and the GUI is useful if the terminal is still new to you</li>
             </ul>
 
             <h3>How to Install Anaconda</h3>
@@ -89,7 +89,7 @@
             </ol>
 
             <h2>How to Use Your Terminal</h2>
-            <p>If you're not comfortable using the terminal, I recommend starting with <b>Anaconda Navigator</b>, a graphical interface that makes it easy to manage environments and packages. However, learning to use the terminal can be incredibly helpful. Relying solely on GUIs often means juggling multiple programs for different tasks. For instance, you'd use Anaconda Navigator to manage virtual environments, GitHub Desktop to handle repositories, and so on. By contrast, the terminal allows you to streamline your workflow and automate repetitive tasks through tools like Bash scripting, making you much more efficient in the long run.</p>
+            <p>If the terminal feels unfamiliar, start with <b>Anaconda Navigator</b>. It gives you a graphical way to manage environments and packages. Still, it is worth learning a few terminal commands. Otherwise you end up jumping between separate apps for environments, Git, file management, and scripts.</p>
 
             <h3>Opening the Terminal</h3>
             <h4>macOS</h4>
@@ -97,7 +97,7 @@
 
             <h4>Windows</h4>
             <p>On Windows, you can open the terminal by searching for it in the start menu or by pressing <code>Windows + R</code> and typing "cmd".</p>
-            <p>However, on Windows, I would recommend using Git Bash, which is a terminal emulator that allows you to use a bash shell  in Windows. You can download it <a href="https://git-scm.com/downloads/win">here</a>. You will likely want to download Git anyway, so this is a good time to set it up. To link up your Git Bash with Conda, you can follow the steps in this post <a href="https://discuss.codecademy.com/t/setting-up-conda-in-git-bash/534473">here</a>.</p>
+            <p>On Windows, I would use Git Bash. It gives you a bash-style terminal, and you will probably want Git installed anyway. You can download it <a href="https://git-scm.com/downloads/win">here</a>. To connect Git Bash with Conda, follow the steps in this post <a href="https://discuss.codecademy.com/t/setting-up-conda-in-git-bash/534473">here</a>.</p>
 
             <h4>Linux</h4>
             <p>If you are on Linux, I am going to assume you know how to open the terminal. But do check that your Conda is installed properly (see below).</p>
@@ -107,7 +107,7 @@
             <p>If you see something like <code>conda: command not found</code>, then check that you completed the installation steps above.</p>
 
             <h3>Basic Terminal Commands</h3>
-            <p>If you want to learn about your terminal, you can start here <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">here</a>. But here are a few a simple exercises to get familiar with basic terminal commands. Try these commands in your terminal:</p>
+            <p>If you want a broader command line tutorial, start with <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Codecademy's command line course</a>. For now, try these few commands in your terminal:</p>
 
             <pre><code class="language-shell">$ ls
 Documents  Downloads  Pictures</code></pre>
@@ -139,7 +139,7 @@ $ ls</code></pre>
             </ul>
 
             <h2>Creating a Virtual Environment</h2>
-            <p>A virtual environment is like a separate container for your Python project. It allows you to:</p>
+            <p>A virtual environment keeps one project's Python packages separate from the rest of your computer. It helps you:</p>
             <ul>
                 <li>Install specific versions of Python packages without affecting other projects</li>
                 <li>Keep your project dependencies isolated and organized</li>
@@ -150,8 +150,8 @@ $ ls</code></pre>
             <p>Here's how to create and manage a virtual environment using Conda:</p>
 
             <h3>1. Create a New Environment</h3>
-            <p><em>Note: The exact text and output you see may vary depending on your operating system and current directory. Don't worry if your output looks different! Most of the text I have added here was simplified for ease.</em></p>
-            <p>First, you will need to create a new environment. You can do this by running the following command: <code>conda create -n learn-python python=3.11</code></p>.
+            <p><em>Note: the exact text and output may vary depending on your operating system and current directory. The examples here are simplified.</em></p>
+            <p>First, create a new environment with <code>conda create -n learn-python python=3.11</code>.</p>
             <pre><code class="language-shell">$ conda create -n learn-python python=3.11
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -178,7 +178,7 @@ Executing transaction: done</code></pre>
             <p>Now that you have created an environment, you can activate it by running the following command: <code>conda activate learn-python</code></p>
             <pre><code class="language-shell">$ conda activate learn-python
 (learn-python) $</code></pre>
-            <p>Notice how the prompt changes to show the active environment name in parentheses. This indicates you're now working within the "learn-Python" environment.</p>
+            <p>The prompt changes to show the active environment name in parentheses. That means you are working inside the "learn-python" environment.</p>
 
             <h3>3. Verify Your Environment</h3>
             <p>You can verify that you are using the correct Python version by running the following command: <code>python --version</code></p>
@@ -203,17 +203,16 @@ $</code></pre>
                 <li>To update all packages: <code>conda update --all</code></li>
             </ul>
 
-            <p>Now that you have your environment set up, you're ready to start coding! Let's move on to some basic Python syntax.</p>
+            <p>With the environment set up, you can move on to basic Python syntax.</p>
 
             <h2>Installing a text editor/IDE</h2>
-            <p>Now that we have our environment set up, we can install a text editor or IDE. I recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> or <a href="https://www.jetbrains.com/pycharm/" target="_blank"> PyCharm</a>. However, there are many other options out there and I encourage you to explore, or if you have used one already stick with that one. I would recommend choosing one and sticking with it while you are learning, as you want to focus on learning Python, not figuring out how to use a new text editor.</p>
+            <p>Next, install a text editor or IDE. I usually recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> or <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>. If you already have one you like, use that. Early on, the goal is learning Python, not learning five editors at once.</p>
 
-            <p>You may have also heard of JupyterLab, which is very common for jupyter notebooks. I personally don't use it, as I don't find the support for other languages and features in Python as good as VS Code or PyCharm/DataSpell. But if you want to use it, you can install it via Conda by running: <code>conda install -c conda-forge jupyterlab</code> in the environment you want to install it in. <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">Link to JupyterLab installation page</a>. This will install it like other packages/libraries. Then, to launch JupyterLab, type <code>jupyter lab</code> in your terminal (make sure you are in the environment where JupyterLab is installed). JupyterLab will then open in your default browser.
-            </p>
+            <p>You may have also heard of JupyterLab, which is common for notebooks. I do not use it much, mostly because VS Code and PyCharm/DataSpell fit my workflow better. If you want JupyterLab, install it in your environment with <code>conda install -c conda-forge jupyterlab</code>. The <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">JupyterLab installation page</a> has more detail. To launch it, type <code>jupyter lab</code> in your terminal while that environment is active. It should open in your browser.</p>
 
 
             <h2>Basic Python Syntax</h2>
-            <p>Now that you have your environment set up and a text editor/IDE installed, you can start coding! First open a new file in your text editor/IDE and save it as <code>hello_world.py</code>. Now open that file in your text editor/IDE and you will see a blank screen. Hello World is a traditional first program to write when learning a new programming language, so let's write that first. In your .py file, write the following code:</p>
+            <p>Open a new file in your editor and save it as <code>hello_world.py</code>. Hello World is the usual first program, so we may as well start there. In your file, write:</p>
             <pre><code class="language-python">
 print("Hello, world!")
                 </code></pre>
@@ -221,7 +220,7 @@ print("Hello, world!")
             <pre><code class="language-shell">
 Hello, world!
                 </code></pre>
-            <p>Congratulations! You have just written your first Python program. Now let's move on to some more fundamental concepts.</p>
+            <p>That is a Python program. Small, but it counts. Next are a few basic concepts you will use constantly.</p>
 
             <h3>Variables and Data Types</h3>
             <pre><code class="language-python">

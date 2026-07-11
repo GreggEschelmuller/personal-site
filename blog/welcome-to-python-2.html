@@ -28,8 +28,8 @@
         <nav aria-label="Primary navigation">
             <ul class="nav-links">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html?v=dcc42f8">About</a></li>
-                <li><a href="../research.html?v=dcc42f8">Research</a></li>
+                <li><a href="../about.html?v=20260711c">About</a></li>
+                <li><a href="../research.html?v=20260711c">Research</a></li>
                 <li><a href="../teaching.html">Teaching</a></li>
                 <li><a href="../applied-work.html">Applied Work</a></li>
                 <li><a href="../blog.html" aria-current="page">Writing</a></li>
@@ -56,18 +56,18 @@
         <div class="blog-post-content">
             <p>If you followed along with <a href="welcome-to-python.html">Part I</a>, you should have a working conda environment, a text editor, and some basic Python running. Now comes the part that actually starts to feel useful.</p>
 
-            <p>This post covers data structures, control flow, and functions. Not glamorous, but this is the stuff that makes up the bulk of any real script you'll ever write. Before we bring in external libraries, I want to show you how much you can already do with just what Python ships with, and more importantly, NumPy and Pandas build on top of this, not around it.</p>
+            <p>This post covers data structures, control flow, and functions. Not glamorous, but this is the stuff that makes up most real scripts. Before bringing in external libraries, it helps to know what Python already gives you. NumPy and Pandas build on these ideas.</p>
 
-            <p>With just the tools covered here, you can already:</p>
+            <p>With these tools, you can already:</p>
             <ul>
                 <li>Store participant IDs, trial results, and metadata</li>
                 <li>Loop through hundreds of trials without manual repetition</li>
                 <li>Flag bad trials automatically based on criteria</li>
-                <li>Write helper functions so you never repeat the same chunk of code by hand</li>
+                <li>Write helper functions instead of copying the same block of code everywhere</li>
             </ul>
 
             <h2>Lists: Ordered Collections</h2>
-            <p>Lists are one of the most common ways to store multiple items in Python. They're ordered, which means items keep their position, and they're flexible: you can add, remove, and change them at will. In research, you might keep a list of participant IDs, stimulus names, or data files to process.</p>
+            <p>Lists are one of the most common ways to store multiple items in Python. They are ordered, so items keep their position. You can add, remove, and change them. In research, you might keep a list of participant IDs, stimulus names, or data files to process.</p>
             <pre><code class="language-python">participants = ["P001", "P002", "P003"]
 
 # access by index (count starts at 0)
@@ -130,7 +130,7 @@ print(low, high)    # 1 7
             </ul>
 
             <h2>Dictionaries: Key/Value Mappings</h2>
-            <p>Dictionaries store data as key/value pairs. Think of them like labeled boxes: the “key” is the label, and the “value” is what’s inside. They’re perfect for mapping IDs to results, condition names to settings, or filenames to their metadata.</p>
+            <p>Dictionaries store data as key/value pairs. The key is the label; the value is the thing stored under that label. They work well for mapping IDs to results, condition names to settings, or filenames to metadata.</p>
             <pre><code class="language-python">results = {
     "P001": [0.52, 0.48, 0.56],
     "P002": [0.61, 0.59, 0.63],
@@ -180,7 +180,7 @@ print(unique_participants)  # {'P001', 'P002', 'P003'}
                 <li>Check if a specific number is in the set.</li>
             </ul>
 
-            <h2>Control Flow: Making Your Code Think</h2>
+            <h2>Control Flow</h2>
             <h3>If / elif / else</h3>
             <p>Use these to branch your code based on conditions. In research, this might mean adjusting difficulty based on performance or flagging poor-quality data.</p>
             <pre><code class="language-python">accuracy = 0.82
@@ -214,7 +214,7 @@ while countdown > 0:
             </ul>
 
             <h2>Functions: Reusable Code Blocks</h2>
-            <p>Functions package your code into named, reusable pieces. This keeps your scripts tidy and makes it easier to test and debug individual parts.</p>
+            <p>Functions package code into named, reusable pieces. They keep scripts easier to read, test, and debug.</p>
             <pre><code class="language-python">def mean(values):
     return sum(values) / len(values)
 
@@ -238,7 +238,7 @@ greet("Gregg", "Hi")     # Hi, Gregg!
             </ul>
 
             <h2>Mini-Project: Participant Performance Tracker</h2>
-            <p>Let’s tie everything together with a small example that doesn’t require any extra files.</p>
+            <p>Here is a small example that does not require any extra files.</p>
 
             <pre><code class="language-python">def mean(values):
     return sum(values) / len(values)
@@ -269,7 +269,7 @@ for pid, accs in results.items():
                 <li>Sort participants by their average accuracy and print them from highest to lowest.</li>
             </ul>
 
-            <p>That's Part II. If you've gone through the "try it yourself" sections, you already know enough Python to automate a bunch of tedious stuff in your research. Part III brings in NumPy, Pandas, and Matplotlib, and that's when things start to feel genuinely powerful.</p>
+            <p>That's Part II. If you went through the "try it yourself" sections, you know enough Python to automate some tedious research tasks. Part III brings in NumPy, Pandas, and Matplotlib.</p>
         </div>
     </article>
 </main>
