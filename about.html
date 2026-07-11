@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writing - Gregg Eschelmuller</title>
-    <meta name="description" content="Writing by Gregg Eschelmuller on movement science, research methods, programming for analysis, and teaching.">
+    <title>About - Gregg Eschelmuller</title>
+    <meta name="description" content="About Gregg Eschelmuller, a researcher, educator, and applied scientist in motor control, motor learning, proprioception, and sensorimotor physiology.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap" rel="stylesheet">
@@ -24,11 +24,11 @@
             <nav aria-label="Primary navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="teaching.html">Teaching</a></li>
                     <li><a href="applied-work.html">Applied Work</a></li>
-                    <li><a href="blog.html" aria-current="page">Writing</a></li>
+                    <li><a href="blog.html">Writing</a></li>
                     <li><a href="cv.html">CV</a></li>
                     <li><a href="index.html#contact">Contact</a></li>
                 </ul>
@@ -38,40 +38,31 @@
 
     <main>
         <section class="page-hero">
-            <p class="eyebrow">Writing</p>
-            <h1>Writing on movement science and research methods.</h1>
-            <p>Essays and tutorials on research workflows, programming for analysis, and ideas from motor control and learning.</p>
+            <p class="eyebrow">About</p>
+            <h1>How sensory feedback shapes movement.</h1>
+            <p>I work on motor control, motor learning, proprioception, and sensorimotor physiology.</p>
         </section>
 
         <section class="section">
-            <div class="blog-filters">
-                <div class="search-box">
-                    <input type="search" id="blog-search" placeholder="Search writing" aria-label="Search writing">
+            <div class="feature-grid">
+                <div>
+                    <img class="portrait" src="images/gregg-modified.png" alt="Gregg Eschelmuller">
                 </div>
-                <div class="tag-filters" id="tag-filters" aria-label="Filter writing by topic"></div>
-            </div>
-
-            <div class="writing-list" id="blog-posts">
-                <article class="writing-card">
-                    <p class="meta">March 21, 2024</p>
-                    <div class="tag-row">
-                        <span class="tag">Python</span>
-                        <span class="tag">Research methods</span>
-                        <span class="tag">Analysis</span>
+                <div class="text-stack">
+                    <div class="text-block">
+                        <h2>Professional profile</h2>
+                        <p>I completed a PhD in Kinesiology with a focus on motor control, motor learning, proprioception, and sensorimotor physiology. My research examines how the nervous system uses sensory feedback to estimate body position, adapt movement, and maintain control when feedback changes.</p>
+                        <p>My work combines human experiments, neuromechanical measurement, computational modeling, and practical analysis workflows. I care about careful experiments, clear explanation, and methods that other people can understand and use.</p>
                     </div>
-                    <h2><a href="blog/welcome-to-python.html">Learning Python for research, Part I</a></h2>
-                    <p class="blog-excerpt">A practical introduction to Python for researchers who want to analyze data and automate repetitive tasks.</p>
-                </article>
-                <article class="writing-card">
-                    <p class="meta">April 5, 2024</p>
-                    <div class="tag-row">
-                        <span class="tag">Python</span>
-                        <span class="tag">Research methods</span>
-                        <span class="tag">Analysis</span>
+                    <div class="text-block">
+                        <h2>Working focus</h2>
+                        <ul>
+                            <li>Research on proprioception, kinesthesia, tendon vibration, and sensorimotor adaptation.</li>
+                            <li>Teaching in physiology, motor behavior, neuroanatomy, and neuromechanical kinesiology.</li>
+                            <li>Applied analysis using experimental systems, signal processing, modeling, and reproducible research workflows.</li>
+                        </ul>
                     </div>
-                    <h2><a href="blog/welcome-to-python-2.html">Learning Python for research, Part II</a></h2>
-                    <p class="blog-excerpt">Data structures, control flow, and functions for organizing participant data, trial results, and common analysis tasks.</p>
-                </article>
+                </div>
             </div>
         </section>
     </main>
@@ -87,6 +78,5 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
-    <script src="js/blog.js"></script>
 </body>
 </html>

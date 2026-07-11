@@ -1,6 +1,6 @@
 // Blog functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const blogPosts = document.querySelectorAll('.blog-card');
+    const blogPosts = document.querySelectorAll('.writing-card, .blog-card');
 
     // Search functionality
     const searchInput = document.getElementById('blog-search');

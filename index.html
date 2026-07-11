@@ -3,182 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gregg Eschelmuller - Researcher & Engineer</title>
-    
-    <meta name="description" content="Gregg Eschelmuller is a PhD researcher at UBC specializing in neuromechanics, computational modeling, and real-time hardware interfacing for tech and neurotech.">
-    <meta name="keywords" content="proprioception, motor control, neuroscience, computational modeling, python, nidaqmx, neurotech">
-    
-    <meta property="og:title" content="Gregg Eschelmuller - Researcher & Engineer">
-    <meta property="og:description" content="Bridging the gap between human neuroscience and tech.">
+    <title>Gregg Eschelmuller - Movement Science Researcher</title>
+    <meta name="description" content="Gregg Eschelmuller is a researcher, educator, and applied scientist studying motor control, motor learning, proprioception, and sensorimotor physiology.">
+    <meta name="keywords" content="motor control, motor learning, proprioception, sensorimotor physiology, kinesiology, movement science">
+    <meta property="og:title" content="Gregg Eschelmuller - Movement Science Researcher">
+    <meta property="og:description" content="Researcher, educator, and applied scientist studying how humans control and learn movement.">
     <meta property="og:image" content="https://greggeschelmuller.github.io/personal-site/images/gregg-modified.png">
     <meta property="og:url" content="https://greggeschelmuller.github.io/personal-site/">
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="images/neuron.png">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Gregg Eschelmuller</h1>
-            <p>PhD Candidate in Neuromechanics | Researcher & Engineer</p>
-            <div class="header-cta">
-                <a href="mailto:g.eschelmuller@gmail.com" class="btn">Contact Me</a>
-            </div>
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="index.html" aria-label="Gregg Eschelmuller home">
+                <span class="brand-name">Gregg Eschelmuller</span>
+                <span class="brand-role">Movement science</span>
+            </a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="applied-work.html">Applied Work</a></li>
+                    <li><a href="blog.html">Writing</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <nav>
-        <div class="container">
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="cv.html">CV (Academic)</a></li>
-                <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main class="container">
-        <section class="profile">
-            <div class="profile-wrapper">
-                <img src="images/gregg-modified.png" alt="Gregg Eschelmuller profile picture" class="profile-image">
-                <div class="profile-content">
-                    <h2>About Me</h2>
-                    <p>Hi! My name is Gregg, a PhD Candidate in Neuromechanics at UBC. My research is at the intersection of neuroscience and engineering. I investigate how the human motor system uses sensory feedback to control movement, learn, and adapt.</p>
-                    <p>I build the complete tools for my own research, from real-time hardware platforms (Python, NI-DAQ, PsychoPy) to the computational models (Bayesian Stats, ML) for data analysis. I'm looking to transition from academia into quantitative and research-focused roles in industry, where I can apply rigorous experimental and analytical thinking to complex, data-driven problems.</p>
-                </div>
+    <main>
+        <section class="hero">
+            <div class="hero-inner">
+                <p class="eyebrow">Researcher / educator / applied scientist</p>
+                <h1>Motor control, learning, and the sense of movement.</h1>
+                <p>I study motor control, motor learning, proprioception, and sensorimotor physiology, with a focus on how sensory feedback helps people plan, correct, and adapt movement.</p>
             </div>
         </section>
 
-        <section class="technical-skills">
-            <h2>Technical Toolkit</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <p>Python, MATLAB</p>
+        <section class="section">
+            <div class="profile-overview">
+                <aside class="profile-card" aria-label="Research focus summary">
+                    <img src="images/gregg-modified.png" alt="Gregg Eschelmuller">
+                    <div class="portrait-card-copy">
+                        <p class="meta">Current focus</p>
+                        <p>Proprioception, tendon vibration, adaptation, teaching, and applied analysis.</p>
+                    </div>
+                    <div class="focus-pills" aria-label="Areas of work">
+                        <span>Motor control</span>
+                        <span>Proprioception</span>
+                        <span>Teaching</span>
+                        <span>Applied methods</span>
+                    </div>
+                </aside>
+                <div class="profile-copy">
+                    <p class="section-label">Profile</p>
+                    <h2>Research, teaching, and applied analysis of human movement.</h2>
+                    <p>My PhD in Kinesiology focused on how sensory feedback shapes movement. I am especially interested in how people know where their limbs are, how they adapt when feedback changes, and how experiments can capture those processes clearly.</p>
                 </div>
-                <div class="skill-card">
-                    <h3>Data Science & ML</h3>
-                    <p>Pandas, NumPy, SciPy, Scikit-learn, PyTorch, Statsmodels</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Hardware & Neuro</h3>
-                    <p>NI-DAQmx, PsychoPy, EMG/Biomechanical Signal Processing, Spike2</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Tools</h3>
-                    <p>Git, GitHub, Jupyter</p>
-                </div>
+            </div>
+            <div class="grid">
+                <article class="panel">
+                    <h3>Research</h3>
+                    <p>Motor control, proprioception, tendon vibration, sensorimotor adaptation, and neuromechanics.</p>
+                    <p><a href="research.html">View research themes</a></p>
+                </article>
+                <article class="panel">
+                    <h3>Teaching</h3>
+                    <p>Courses and mentorship in physiology, motor behavior, neuroanatomy, and neuromechanical kinesiology.</p>
+                    <p><a href="teaching.html">View teaching work</a></p>
+                </article>
+                <article class="panel">
+                    <h3>Applied Work</h3>
+                    <p>Experimental systems, signal processing, modeling, and analysis workflows for human movement research.</p>
+                    <p><a href="applied-work.html">View applied methods</a></p>
+                </article>
+                <article class="panel">
+                    <h3>Writing</h3>
+                    <p>Notes on research methods, movement science, and practical analysis.</p>
+                    <p><a href="blog.html">Read writing</a></p>
+                </article>
             </div>
         </section>
 
-        <section class="research-interests">
-            <h2>Research Interests</h2>
-            <div class="interests-grid">
-                <a href="research.html#proprioception" class="interest-card">
-                    <div class="interest-header">
-                        <span class="interest-icon">🧠</span>
-                        <h3>Proprioception</h3>
-                    </div>
-                    <p>Modeling how the brain knows where the body is in space.</p>
-                </a>
-                <a href="research.html#motor-control" class="interest-card">
-                    <div class="interest-header">
-                        <span class="interest-icon">🏃</span>
-                        <h3>Motor Control</h3>
-                    </div>
-                    <p>Building real-time systems to study how the nervous system coordinates movement.</p>
-                </a>
-                <a href="research.html#sensorimotor-integration" class="interest-card">
-                    <div class="interest-header">
-                        <span class="interest-icon">📊</span>
-                        <h3>Sensorimotor Integration</h3>
-                    </div>
-                    <p>Investigating how sensory information (vision, touch) influences motor commands.</p>
-                </a>
-            </div>
-        </section>
-
-        <section class="publications">
-            <h2>Recent Publications</h2>
-            <div class="publication-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="first-author">First Author</button>
-                <button class="filter-btn" data-filter="co-author">Co-Author</button>
+        <section class="section">
+            <div class="section-header">
+                <p class="section-label">Selected publications</p>
+                <div>
+                    <h2>Research on sensory feedback and movement control.</h2>
+                    <p>A selection of peer-reviewed work on proprioception, tendon vibration, kinesthesia, reflexes, and goal-directed movement.</p>
+                </div>
             </div>
             <ul class="publication-list">
-                <li data-type="first-author"><strong>Eschelmuller, G.,</strong> Kim, H., Inglis, J.T., Chua, R., (2025). Dual agonist and antagonist muscle vibration produces a bias in end point with  no change in variability. Experimental Brain Research... <a href="httpsE://doi.org/10.1007/s00221-025-07143-3" class="pub-link">https://doi.org/10.1007/s00221-025-07143-3</a></li>
-                <li data-type="first-author"><strong>Eschelmuller, G</strong>., Szarka, A., Gandossi, B., Inglis, J. T., & Chua, R. (2023). The effects of periodic and noisy tendon vibration on a kinesthetic targeting task. Experimental Brain Research. <a href="https..." class="pub-link">https://doi.org/10.1007/s00221-023-06727-1</a></li>
-                <li data-type="co-author">Grose, G., Manzone, D., <strong>Eschelmuller, G.,</strong>... (2022). The effects of eccentric exercise-induced fatigue on position sense during goal-directed movement. Journal of Applied Physiology... <a href="https..." class="pub-link">https://doi.org/10.1152/japplphysiol.00177.2021</a></li>
-                <li data-type="first-author"><strong>Eschelmuller, G.,</strong> Chua, R., Carpenter, M. G., & Inglis, J. T. (2021). The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. Neuroscience Letters... <a href="https..." class="pub-link">https://doi.org/10.1016/j.neulet.2021.136279</a></li>
+                <li>
+                    <span class="publication-meta">Experimental Brain Research / 2025</span>
+                    <p><strong>Eschelmuller, G.</strong>, Kim, H., Inglis, J. T., & Chua, R. Dual agonist and antagonist muscle vibration produces a bias in end point with no change in variability. <a href="https://doi.org/10.1007/s00221-025-07143-3">doi.org/10.1007/s00221-025-07143-3</a></p>
+                </li>
+                <li>
+                    <span class="publication-meta">Experimental Brain Research / 2023</span>
+                    <p><strong>Eschelmuller, G.</strong>, Szarka, A., Gandossi, B., Inglis, J. T., & Chua, R. The effects of periodic and noisy tendon vibration on a kinesthetic targeting task. <a href="https://doi.org/10.1007/s00221-023-06727-1">doi.org/10.1007/s00221-023-06727-1</a></p>
+                </li>
+                <li>
+                    <span class="publication-meta">Journal of Applied Physiology / 2022</span>
+                    <p>Grose, G., Manzone, D., <strong>Eschelmuller, G.</strong>, Peters, R., Carpenter, M. G., Inglis, J. T., & Chua, R. The effects of eccentric exercise-induced fatigue on position sense during goal-directed movement. <a href="https://doi.org/10.1152/japplphysiol.00177.2021">doi.org/10.1152/japplphysiol.00177.2021</a></p>
+                </li>
+                <li>
+                    <span class="publication-meta">Neuroscience Letters / 2021</span>
+                    <p><strong>Eschelmuller, G.</strong>, Chua, R., Carpenter, M. G., & Inglis, J. T. The acute effects of periodic and noisy tendon vibration on wrist muscle stretch responses. <a href="https://doi.org/10.1016/j.neulet.2021.136279">doi.org/10.1016/j.neulet.2021.136279</a></p>
+                </li>
             </ul>
-            <a href="cv.html" class="btn btn-secondary">View Full Academic CV</a>
+            <p class="actions"><a class="button secondary" href="cv.html">View full CV</a></p>
         </section>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>Gregg Eschelmuller</h3>
-                    <p>Researcher at UBC investigating human movement and proprioception..</p>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p><strong>Email:</strong> <a href="mailto:g.eschelmuller@gmail.com">g.eschelmuller@gmail.com</a></p>
-                    <p><strong>Alternative Email:</strong> <a href="mailto:gregg.eschelmuller@ubc.ca">gregg.eschelmuller@ubc.ca</a></p>
-                </div>
-                <div class="social-links">
-                    <h3>Connect with Me</h3>
-                    <div class="social-icons">
-                        <a href="https://x.com/GreggEsche" target="_blank" rel="noopener noreferrer" class="social-icon twitter">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                            Twitter
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="social-icon google-scholar">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M21.328 2.002v9.2M8.695 7.85c..."></path><path d="M5.34 16.66c..."></path></svg>
-                            Google Scholar
-                        </a>
-                        <a href="https://www.linkedin.com/in/gregg-eschelmuller/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c..."></path></svg>
-                            LinkedIn
-                        </a>
-                    </div>
+
+        <section class="section" id="contact">
+            <div class="section-header">
+                <p class="section-label">Contact</p>
+                <div>
+                    <h2>Contact</h2>
+                    <p>Email is the best way to get in touch. My publication record and professional background are also linked below.</p>
+                    <p class="profile-links">
+                        <a class="button" href="mailto:g.eschelmuller@gmail.com">g.eschelmuller@gmail.com</a>
+                        <a class="button secondary" href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en">Google Scholar</a>
+                        <a class="button secondary" href="https://www.linkedin.com/in/gregg-eschelmuller/">LinkedIn</a>
+                    </p>
                 </div>
             </div>
-            <div class="footer-credits">
-                <p>
-                    <a href="https://www.flaticon.com/free-icons/neuron" title="neuron icons" target="_blank" rel="noopener noreferrer">
-                        Neuron icons created by Nadiinko - Flaticon
-                    </a>
-                </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <p>Motor control, proprioception, teaching, and applied analysis.</p>
+            <div class="footer-links">
+                <a href="mailto:g.eschelmuller@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/gregg-eschelmuller/">LinkedIn</a>
             </div>
         </div>
     </footer>
-    <script src="js/theme.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

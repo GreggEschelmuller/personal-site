@@ -3,64 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Projects - Gregg Eschelmuller</title>
-    
+    <title>Research - Gregg Eschelmuller</title>
+    <meta name="description" content="Research themes in motor control, motor learning, proprioception, sensorimotor integration, and neuromechanics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/neuron.png">
 </head>
 <body>
-    <header>...</header> <nav>
-        <div class="container">
-            <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+    <header class="site-header">
+        <div class="nav-wrap">
+            <a class="brand" href="index.html" aria-label="Gregg Eschelmuller home">
+                <span class="brand-name">Gregg Eschelmuller</span>
+                <span class="brand-role">Movement science</span>
+            </a>
+            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="research.html">Research Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="cv.html">CV (Academic)</a></li>
-                <li><button id="theme-toggle" ...></button></li>
-            </ul>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html" aria-current="page">Research</a></li>
+                    <li><a href="teaching.html">Teaching</a></li>
+                    <li><a href="applied-work.html">Applied Work</a></li>
+                    <li><a href="blog.html">Writing</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <main class="container">
-        <div class="research-page">
-            <h1 class="page-title">Research Projects</h1>
-            <p class="page-intro">My research focuses on understanding human motor control. I'm currently translating this academic work into blog posts and portfolio projects that explain *why* this science matters for technology.</p>
-            
-            <section class="research-area" id="proprioception">
-                <div class="research-header">
-                    <span class="research-icon">🧠</span>
-                    <h2>Proprioception</h2>
+    <main>
+        <section class="page-hero">
+            <p class="eyebrow">Research</p>
+            <h1>How sensory feedback shapes movement.</h1>
+            <p>My research focuses on proprioception, motor control, motor learning, and sensorimotor physiology in human movement.</p>
+        </section>
+
+        <section class="section">
+            <div class="grid">
+                <article class="panel" id="proprioception">
+                    <h3>Proprioception and kinesthesia</h3>
+                    <p>How people sense limb position and movement, and how that sense changes when muscle and tendon feedback is manipulated.</p>
+                </article>
+                <article class="panel" id="sensorimotor-integration">
+                    <h3>Sensorimotor integration</h3>
+                    <p>How visual, tactile, and proprioceptive information are combined to guide accurate goal-directed actions.</p>
+                </article>
+                <article class="panel" id="motor-learning">
+                    <h3>Motor learning and adaptation</h3>
+                    <p>How people adjust movements when feedback is altered, uncertain, or in conflict with intended action.</p>
+                </article>
+                <article class="panel" id="neuromechanics">
+                    <h3>Neuromechanics and reflexes</h3>
+                    <p>How sensory pathways and muscle responses contribute to posture, balance, and movement control.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-header">
+                <p class="section-label">Research throughline</p>
+                <div>
+                    <h2>From sensory signals to controlled action.</h2>
+                    <p>I use tendon vibration, reaching and targeting tasks, reflex measures, and computational models to study how people use sensory information when it is uncertain or altered. Much of the work is also methodological: building experiments and analyses that make movement control easier to measure.</p>
                 </div>
-                <div class="research-content">
-                    <p>Proprioception is the central nervous system's sense of its own body. My research investigates how we build this sense and what happens when it's manipulated with tools like tendon vibration, creating powerful sensory illusions.</p>
-                </div>
-            </section>
-            
-            <section class="research-area" id="motor-control">
-                <div class="research-header">
-                    <span class="research-icon">🏃</span>
-                    <h2>Motor Control</h2>
-                </div>
-                <div class="research-content">
-                    <p>I build custom, real-time hardware and software systems to study how the nervous system controls movement. This involves interfacing with hardware (NI-DAQ), presenting visual feedback (PsychoPy), and performing online signal processing.</p>
-                </div>
-            </section>
-            
-            <section class="research-area" id="sensorimotor-integration">
-                <div class="research-header">
-                    <span class="research-icon">📊</span>
-                    <h2>Sensorimotor Integration</h2>
-                </div>
-                <div class="research-content">
-                    <p>I investigate how sensory information (like vision and proprioception) is integrated to produce smooth, accurate movements. This research has direct parallels to sensor fusion algorithms in robotics (e.g., Kalman filters) and AI.</p>
-                </div>
-            </section>
-        </div>
+            </div>
+            <ul class="publication-list">
+                <li>
+                    <span class="publication-meta">Proprioceptive feedback</span>
+                    <p>Tendon vibration studies test how altered muscle afferent signals bias perceived position and movement endpoint.</p>
+                </li>
+                <li>
+                    <span class="publication-meta">Sensory reliability</span>
+                    <p>Kinesthetic targeting and discrimination tasks examine how the nervous system weights sensory information when feedback becomes noisy or ambiguous.</p>
+                </li>
+                <li>
+                    <span class="publication-meta">Adaptation</span>
+                    <p>Bimanual and visual-proprioceptive tasks examine explicit and implicit components of sensorimotor adaptation.</p>
+                </li>
+                <li>
+                    <span class="publication-meta">Human neurophysiology</span>
+                    <p>Reflex and posture experiments connect sensory pathways with muscle responses during stance and movement.</p>
+                </li>
+            </ul>
+        </section>
     </main>
 
-    <footer>...</footer> <script src="js/theme.js"></script>
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <p>Motor control, proprioception, teaching, and applied analysis.</p>
+            <div class="footer-links">
+                <a href="mailto:g.eschelmuller@gmail.com">Email</a>
+                <a href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en">Google Scholar</a>
+                <a href="https://www.linkedin.com/in/gregg-eschelmuller/">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
