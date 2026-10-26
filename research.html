@@ -1,108 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research - Gregg Eschelmuller</title>
-    <meta name="description" content="Research by Gregg Eschelmuller on proprioception, sensory feedback, motor control, and movement learning.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=20260711">
-    <link rel="icon" type="image/png" href="images/neuron.png">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research · Gregg Eschelmuller</title>
+    <meta
+      name="description"
+      content="Research on proprioception, reaching, and motor control."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="images/neuron.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="nav-wrap">
-            <a class="brand" href="index.html" aria-label="Gregg Eschelmuller home">
-                <span class="brand-name">Gregg Eschelmuller</span>
-                <span class="brand-role">Movement science</span>
-            </a>
-            <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-                <span></span><span></span><span></span>
-            </button>
-            <nav aria-label="Primary navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html?v=20260711c">About</a></li>
-                    <li><a href="research.html?v=20260711c" aria-current="page">Research</a></li>
-                    <li><a href="teaching.html">Teaching</a></li>
-                    <li><a href="applied-work.html">Applied Work</a></li>
-                    <li><a href="blog.html">Writing</a></li>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-name">Gregg Eschelmuller</span></a
+        ><button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html" aria-current="page">Research</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Writing</a></li>
+            <li><a href="cv.html">CV</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
     <main>
-        <section class="page-hero">
-            <p class="eyebrow">Research</p>
-            <h1>How we know where our body is.</h1>
-            <p>I study how people use sensory feedback to judge position, correct movement, and adapt when feedback changes.</p>
-        </section>
+      <div class="page-heading">
+        <h1>Research</h1>
+        <p>
+          My research has largely focused on how the nervous system uses sensory information to control movement. Over time, I’ve approached this from a few different angles, including neurophysiology, behavioural experiments, and computational modelling.
+        </p>
+      </div>
+      <div class="prose">
+        <h2>Neurophysiology</h2>
+        <p>
+          My earlier research focused on how proprioceptive signals influence muscle activity through reflex pathways. I was particularly interested in how muscle spindle feedback influences motor output through spinal cord circuits. Using a noisy tendon vibration we could estimate how the motor output is influenced by muscle spindle feedback across a wide range of physiologically relevant frequencies.
+        </p>
+        <p>
+          One finding was that vibrating the Achilles tendon could evoke responses not only in muscles around the ankle, but also in muscles acting at the knee, hip, and trunk. In related work, we found that these responses become weaker and less responsive to higher-frequency stimulation with age. 
+        </p>
+        <p>
+          I also investigated how different patterns of tendon vibration affect stretch reflexes, finding that both periodic and noisy vibration suppress muscle responses to sudden stretches.
+        </p>
+        <h2>Behavioural Research</h2>
+        <p>
+          During my PhD, I became interested in how the nervous system uses proprioceptive information to guide voluntary movement. Much of my research involved target-directed reaching experiments, where I used muscle tendon vibration to alter the sensory information available to participants.
+        </p>
 
-        <section class="section">
-            <div class="grid">
-                <article class="panel" id="proprioception">
-                    <h3>Proprioception and kinesthesia</h3>
-                    <p>How people sense limb position and movement.</p>
-                </article>
-                <article class="panel" id="sensorimotor-integration">
-                    <h3>Sensorimotor integration</h3>
-                    <p>How vision, touch, and proprioception work together during action.</p>
-                </article>
-                <article class="panel" id="motor-learning">
-                    <h3>Motor learning and adaptation</h3>
-                    <p>How people adjust when feedback changes.</p>
-                </article>
-                <article class="panel" id="neuromechanics">
-                    <h3>Neuromechanics and reflexes</h3>
-                    <p>How sensory pathways and muscle responses support movement.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-                <p class="section-label">Research throughline</p>
-                <div>
-                    <h2>Most of my work focuses on sensory feedback loops.</h2>
-                    <p>I use tendon vibration, reaching tasks, reflex measures, and models to study how the brain uses sensory feedback during motor control tasks.</p>
-                </div>
-            </div>
-            <ul class="publication-list">
-                <li>
-                    <span class="publication-meta">Proprioceptive feedback</span>
-                    <p>Tendon vibration studies test how altered muscle afferent signals bias perceived position and movement endpoint. I use these methods to understand how proprioceptive feedback is being processed in the brain.</p>
-                </li>
-                <li>
-                    <span class="publication-meta">Sensory reliability</span>
-                    <p>Kinesthetic targeting and discrimination tasks examine how the nervous system weights sensory information when feedback becomes noisy or ambiguous.</p>
-                </li>
-                <li>
-                    <span class="publication-meta">Adaptation</span>
-                    <p>Bimanual and visual-proprioceptive tasks examine explicit and implicit components of sensorimotor adaptation.</p>
-                </li>
-                <li>
-                    <span class="publication-meta">Human neurophysiology</span>
-                    <p>Reflex and posture experiments connect sensory pathways with muscle responses during stance and movement.</p>
-                </li>
-            </ul>
-        </section>
+        <p>
+          A key finding from this work was that proprioceptive processing appears to be flexible. Rather than treating proprioception as a single, homogeneous signal, the nervous system seems to integrate information from multiple sources, with their relative contributions depending on the sensory information available. This suggests that our sense of limb position is constructed from several sources of information rather than relying on any one signal.
+        </p>
+        <h2>Computational Modelling</h2>
+        <p>
+          My interest in computational modelling grew out of my PhD research. The behavioural experiments suggested that the nervous system integrates proprioceptive information from multiple sources, but I wanted to better understand how that integration might work and whether a model could explain the patterns we observed.
+        </p>
+        <p>
+          To explore this, I’ve been developing a Bayesian model of proprioceptive integration. The model treats different sources of sensory information as noisy estimates of limb position and combines them according to their relative reliability. My goal is to see whether this framework can reproduce the reaching errors observed in my experiments and help explain how different proprioceptive signals contribute to our sense of limb position.
+        </p>
+        <h2>Publications</h2>
+        <p>
+          For the full list of journal articles, conference presentations, and
+          other research work, see my <a href="cv.html">CV</a>. You can also
+          find my papers on
+          <a
+            href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          >.
+        </p>
+      </div>
     </main>
-
     <footer class="site-footer">
-        <div class="wrap footer-grid">
-            <p>Motor control, proprioception, teaching, and applied analysis.</p>
-            <div class="footer-links">
-                <a href="mailto:g.eschelmuller@gmail.com">Email</a>
-                <a href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/gregg-eschelmuller/">LinkedIn</a>
-            </div>
+      <div class="footer-grid">
+        <p>© Gregg Eschelmuller</p>
+        <div class="footer-links">
+          <a href="mailto:g.eschelmuller@gmail.com">Email</a
+          ><a
+            href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          ><a href="https://www.linkedin.com/in/gregg-eschelmuller/"
+            >LinkedIn</a
+          >
         </div>
+      </div>
     </footer>
-    <script src="js/main.js?v=20260711"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

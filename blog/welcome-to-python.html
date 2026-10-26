@@ -1,161 +1,285 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="An introduction to Python programming for researchers">
-    <meta name="keywords" content="Python, programming, research methods, analysis">
-    <title>Welcome to Python (and Why You Don't Need to Be a Coder) - Gregg Eschelmuller</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css?v=20260711">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      content="An introduction to Python programming for researchers"
+      name="description"
+    />
+    <meta
+      content="Python, programming, research methods, analysis"
+      name="keywords"
+    />
+    <title>
+      Welcome to Python (and Why You Don't Need to Be a Coder) - Gregg
+      Eschelmuller
+    </title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;650&amp;family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/styles.css" rel="stylesheet" />
     <!-- Add Prism.js for syntax highlighting -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-</head>
-<body>
-<header class="site-header">
-    <div class="nav-wrap">
-        <a class="brand" href="../index.html" aria-label="Gregg Eschelmuller home">
-            <span class="brand-name">Gregg Eschelmuller</span>
-            <span class="brand-role">Movement science</span>
-        </a>
-        <button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-            <span></span><span></span><span></span>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="../index.html"
+          ><span class="brand-name">Gregg Eschelmuller</span></a
+        ><button
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          class="mobile-menu-toggle"
+          type="button"
+        >
+          <span></span><span></span><span></span>
         </button>
         <nav aria-label="Primary navigation">
-            <ul class="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../about.html?v=20260711c">About</a></li>
-                <li><a href="../research.html?v=20260711c">Research</a></li>
-                <li><a href="../teaching.html">Teaching</a></li>
-                <li><a href="../applied-work.html">Applied Work</a></li>
-                <li><a href="../blog.html" aria-current="page">Writing</a></li>
-                <li><a href="../cv.html">CV</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
+          <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../research.html">Research</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a aria-current="page" href="../blog.html">Writing</a></li>
+            <li><a href="../cv.html">CV</a></li>
+          </ul>
         </nav>
-    </div>
-</header>
-
-<main>
-    <article class="blog-post">
+      </div>
+    </header>
+    <main>
+      <article class="blog-post">
         <header class="blog-post-header">
-            <h1>Learning Python for research (Part I)</h1>
-            <div class="blog-post-meta">
-                <div class="blog-card-tags">
-                    <span class="tag">Python</span>
-                    <span class="tag">Programming</span>
-                    <span class="tag">Research</span>
-                </div>
+          <h1>Learning Python for research (Part I)</h1>
+          <div class="blog-post-meta">
+            <div class="blog-card-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Programming</span>
+              <span class="tag">Research</span>
             </div>
+          </div>
         </header>
-
         <div class="blog-post-content">
-            <p>I came to Python later than I probably should have. My lab ran most things in MATLAB, and for the first couple of years I just went along with that. Then I started building experiments that needed real-time feedback loops and hardware interfacing, and MATLAB started feeling like a real headache. This series is basically the guide I wish I had when I was starting out.</p>
-            <p>Something I wish someone had said plainly: learning to program also means learning to look things up well. Good programmers Google constantly. More recently, they also ask LLMs. Syntax, error messages, library functions, weird installation problems, all of it. That is normal. The skill is not memorizing everything. The skill is knowing enough to ask a better question, check the answer, and keep moving.</p>
-
-            <h2>Why Python?</h2>
-            <p>Python gets recommended constantly, to the point where it almost sounds like hype. Some of the praise is earned. The scientific ecosystem is mature, the syntax is readable enough that old code is usually still understandable, and if you hit a problem, someone else has probably hit it too. For research work, that matters.</p>
-
-            <h2>How Programming Helps with Research Workflows</h2>
-            <p>In my research, I use Python for:</p>
-            <ul>
-                <li>Data analysis and visualization</li>
-                <li>Statistical modeling</li>
-                <li>Automating repetitive tasks</li>
-                <li>Processing experimental data</li>
-                <li>Running motor control experiments with <a href="https://www.psychopy.org/" target="_blank">psychopy</a></li>
-                <li>Building models of motor control</li>
-            </ul>
-
-            <h2>Getting Started with Python</h2>
-            <p>First you need Python on your computer. I recommend Anaconda because it comes with many scientific computing packages already set up.</p>
-            <p>Small update: I use <code>uv</code> for most of my own Python work now. It is fast and tidy, but I would still point most people to Anaconda when they are just getting started. The setup is more forgiving, and the graphical tools help when the terminal is still new.</p>
-
-            <h3>What is Anaconda?</h3>
-            <ul>
-                <li>Anaconda is a distribution of Python and many other packages</li>
-                <li>You can use it to install Python and organize all the libraries you may use</li>
-                <li>You will also use it to create virtual environments, which is a great way to manage your Python libraries</li>
-                <li>There are other Python distributions. I recommend Anaconda here because I use it, I know its quirks, and the GUI is useful if the terminal is still new to you</li>
-            </ul>
-
-            <h3>How to Install Anaconda</h3>
-            <ol>
-                <li>Visit <a href="https://www.anaconda.com/download" target="_blank">Anaconda's download page</a></li>
-                <li>Download the installer for your operating system</li>
-                <li>Run the installer and follow the prompts</li>
-            </ol>
-
-            <h2>How to Use Your Terminal</h2>
-            <p>If the terminal feels unfamiliar, start with <b>Anaconda Navigator</b>. It gives you a graphical way to manage environments and packages. Still, it is worth learning a few terminal commands. Otherwise you end up jumping between separate apps for environments, Git, file management, and scripts.</p>
-
-            <h3>Opening the Terminal</h3>
-            <h4>macOS</h4>
-            <p>On macOS, you can open the terminal by searching for it in Spotlight or by pressing <code>Command + Space</code> and typing "terminal".</p>
-
-            <h4>Windows</h4>
-            <p>On Windows, you can open the terminal by searching for it in the start menu or by pressing <code>Windows + R</code> and typing "cmd".</p>
-            <p>I would not spend much time in Command Prompt if you are learning research programming. Git Bash is the easier recommendation for most people. It gives you a bash-style terminal, and you will probably want Git installed anyway. You can download it <a href="https://git-scm.com/downloads/win">here</a>. To connect Git Bash with Conda, follow the steps in this post <a href="https://discuss.codecademy.com/t/setting-up-conda-in-git-bash/534473">here</a>.</p>
-            <p>WSL is also a good option, especially if you want something closer to a Linux setup on Windows. It is what I would choose if you are comfortable with a bit more setup, or if you expect to use command-line tools often. For a first pass, though, Git Bash is usually enough.</p>
-
-            <h4>Linux</h4>
-            <p>If you are on Linux, I am going to assume you know how to open the terminal. But do check that your Conda is installed properly (see below).</p>
-
-            <h3>Checking That Conda is Installed</h3>
-            <p>To check that Conda is installed, you can type <code>conda --version</code> in your terminal. If it is installed, you will see something like <code>conda 4.14.0</code>.</p>
-            <p>If you see something like <code>conda: command not found</code>, then check that you completed the installation steps above.</p>
-
-            <h3>Basic Terminal Commands</h3>
-            <p>If you want a broader command line tutorial, start with <a href="https://www.codecademy.com/learn/learn-the-command-line" target="_blank">Codecademy's command line course</a>. For now, try these few commands in your terminal:</p>
-
-            <pre><code class="language-shell">$ ls
+          <p>
+            I came to Python later than I probably should have. My lab ran most
+            things in MATLAB, and for the first couple of years I just went
+            along with that. During the course of my graduate studies, I started playing around with Python and basically never looked back. Now Python is my primary programming language of choice.
+          </p>
+          <p>
+            Something I wish someone had said plainly when I first started learning was learning to program also
+            means learning to look things up well. Good programmers Google
+            constantly. More recently, they also ask LLMs. Syntax, error
+            messages, library functions, weird installation problems, all of it.
+            That is normal. The skill is not memorizing everything. The skill is
+            knowing enough to ask a better question, check the answer, and keep
+            moving.
+          </p>
+          <h2>Why Python?</h2>
+          <p>
+            Python gets recommended constantly, and you may wonder why. The scientific
+            ecosystem is mature, the syntax is readable enough that old code is
+            usually still understandable, and if you hit a problem, someone else
+            has probably hit it too. This can be really helpful when doing research work. 
+          </p>
+          <h2>How Programming Helps with Research Workflows</h2>
+          <p>In my research, I use Python for:</p>
+          <ul>
+            <li>Data analysis and visualization</li>
+            <li>Statistical modeling</li>
+            <li>Automating repetitive tasks</li>
+            <li>Processing experimental data</li>
+            <li>
+              Running motor control experiments with
+              <a href="https://www.psychopy.org/" target="_blank">psychopy</a>
+            </li>
+            <li>Building models of motor control</li>
+          </ul>
+          <h2>Getting Started with Python</h2>
+          <p>
+            First you need Python on your computer. I recommend Anaconda because
+            it comes with many scientific computing packages already set up.
+          </p>
+          <p>
+            Small update: I use <code>uv</code> for most of my own Python work
+            now. It is fast and tidy, but I would still point most people to
+            Anaconda when they are just getting started. The setup is more
+            forgiving, and the graphical tools help when the terminal is still
+            new.
+          </p>
+          <h3>What is Anaconda?</h3>
+          <ul>
+            <li>
+              Anaconda is a distribution of Python and many other packages
+            </li>
+            <li>
+              You can use it to install Python and organize all the libraries
+              you may use
+            </li>
+            <li>
+              You will also use it to create virtual environments, which is a
+              great way to manage your Python libraries
+            </li>
+          </ul>
+          <h3>How to Install Anaconda</h3>
+          <ol>
+            <li>
+              Visit
+              <a href="https://www.anaconda.com/download" target="_blank"
+                >Anaconda's download page</a
+              >
+            </li>
+            <li>Download the installer for your operating system</li>
+            <li>Run the installer and follow the prompts</li>
+          </ol>
+          <h2>How to Use Your Terminal</h2>
+          <p>
+            If the terminal feels unfamiliar, start with
+            <b>Anaconda Navigator</b>. It gives you a graphical way to manage
+            environments and packages. Still, it is worth learning a few
+            terminal commands. Otherwise you end up jumping between separate
+            apps for environments, Git, file management, and scripts.
+          </p>
+          <h3>Opening the Terminal</h3>
+          <h4>macOS</h4>
+          <p>
+            On macOS, you can open the terminal by searching for it in Spotlight
+            or by pressing <code>Command + Space</code> and typing "terminal".
+          </p>
+          <h4>Windows</h4>
+          <p>
+            On Windows, you can open the terminal by searching for it in the
+            start menu or by pressing <code>Windows + R</code> and typing "cmd".
+          </p>
+          <p>
+            I would not spend much time in Command Prompt if you are learning
+            research programming. Git Bash is the easier recommendation for most
+            people. It gives you a bash-style terminal, and you will probably
+            want Git installed anyway. You can download it
+            <a href="https://git-scm.com/downloads/win">here</a>. To connect Git
+            Bash with Conda, follow the steps in this post
+            <a
+              href="https://discuss.codecademy.com/t/setting-up-conda-in-git-bash/534473"
+              >here</a
+            >.
+          </p>
+          <p>
+            WSL is also a good option, especially if you want something closer
+            to a Linux setup on Windows. It is what I would choose if you are
+            comfortable with a bit more setup, or if you expect to use
+            command-line tools often. For a first pass, though, Git Bash is
+            usually enough.
+          </p>
+          <h4>Linux</h4>
+          <p>
+            If you are on Linux, I am going to assume you know how to open the
+            terminal. But do check that your Conda is installed properly (see
+            below).
+          </p>
+          <h3>Checking That Conda is Installed</h3>
+          <p>
+            To check that Conda is installed, you can type
+            <code>conda --version</code> in your terminal. If it is installed,
+            you will see something like <code>conda 4.14.0</code>.
+          </p>
+          <p>
+            If you see something like <code>conda: command not found</code>,
+            then check that you completed the installation steps above.
+          </p>
+          <h3>Basic Terminal Commands</h3>
+          <p>
+            If you want a broader command line tutorial, start with
+            <a
+              href="https://www.codecademy.com/learn/learn-the-command-line"
+              target="_blank"
+              >Codecademy's command line course</a
+            >. For now, try these few commands in your terminal:
+          </p>
+          <pre><code class="language-shell">$ ls
 Documents  Downloads  Pictures</code></pre>
-            <p>The command <code>ls</code> shows the contents of your current directory. Now let's create a new directory using the command <code>mkdir</code>:</p>
-
-            <pre><code class="language-shell">$ mkdir test
+          <p>
+            The command <code>ls</code> shows the contents of your current
+            directory. Now let's create a new directory using the command
+            <code>mkdir</code>:
+          </p>
+          <pre><code class="language-shell">$ mkdir test
 $ ls
 Documents  Downloads  Pictures  test</code></pre>
-            <p>Notice the new 'test' directory in the list. Let's move into it using the change directory command <code>cd</code>:</p>
-
-            <pre><code class="language-shell">$ cd test
+          <p>
+            Notice the new 'test' directory in the list. Let's move into it
+            using the change directory command <code>cd</code>:
+          </p>
+          <pre><code class="language-shell">$ cd test
 $ ls</code></pre>
-            <p>The directory is empty. Let's create a new file using the <code>touch</code> command:</p>
-
-            <pre><code class="language-shell">$ touch test.txt
+          <p>
+            The directory is empty. Let's create a new file using the
+            <code>touch</code> command:
+          </p>
+          <pre><code class="language-shell">$ touch test.txt
 $ ls
 test.txt</code></pre>
-            <p>Now let's remove the file using <code>rm</code>:</p>
-
-            <pre><code class="language-shell">$ rm test.txt
+          <p>Now let's remove the file using <code>rm</code>:</p>
+          <pre><code class="language-shell">$ rm test.txt
 $ ls</code></pre>
-            <p>The directory is empty again. Here's a summary of what each command does:</p>
-            <ul>
-                <li><code>ls</code> - Lists files and directories in the current location</li>
-                <li><code>mkdir test</code> - Creates a new directory named "test"</li>
-                <li><code>cd test</code> - Changes into the "test" directory</li>
-                <li><code>touch test.txt</code> - Creates an empty file named "test.txt"</li>
-                <li><code>rm test.txt</code> - Removes the file named "test.txt"</li>
-            </ul>
-
-            <h2>Creating a Virtual Environment</h2>
-            <p>A virtual environment keeps one project's Python packages separate from the rest of your computer. It helps you:</p>
-            <ul>
-                <li>Install specific versions of Python packages without affecting other projects</li>
-                <li>Keep your project dependencies isolated and organized</li>
-                <li>Easily share your project setup with others</li>
-                <li>Avoid conflicts between different projects' requirements</li>
-            </ul>
-
-            <p>Here's how to create and manage a virtual environment using Conda:</p>
-
-            <h3>1. Create a New Environment</h3>
-            <p><em>Note: the exact text and output may vary depending on your operating system and current directory. The examples here are simplified.</em></p>
-            <p>First, create a new environment with <code>conda create -n learn-python python=3.11</code>.</p>
-            <pre><code class="language-shell">$ conda create -n learn-python python=3.11
+          <p>
+            The directory is empty again. Here's a summary of what each command
+            does:
+          </p>
+          <ul>
+            <li>
+              <code>ls</code> - Lists files and directories in the current
+              location
+            </li>
+            <li>
+              <code>mkdir test</code> - Creates a new directory named "test"
+            </li>
+            <li><code>cd test</code> - Changes into the "test" directory</li>
+            <li>
+              <code>touch test.txt</code> - Creates an empty file named
+              "test.txt"
+            </li>
+            <li>
+              <code>rm test.txt</code> - Removes the file named "test.txt"
+            </li>
+          </ul>
+          <h2>Creating a Virtual Environment</h2>
+          <p>
+            A virtual environment keeps one project's Python packages separate
+            from the rest of your projects. It helps you:
+          </p>
+          <ul>
+            <li>
+              Install specific versions of Python packages without affecting
+              other projects
+            </li>
+            <li>Keep your project dependencies isolated and organized</li>
+            <li>Keep track of the packages a project needs, making it easier to recreate the environment later.</li>
+            <li>Avoid conflicts between different projects' requirements</li>
+          </ul>
+          <p>
+            Here's how to create and manage a virtual environment using Conda:
+          </p>
+          <h3>1. Create a New Environment</h3>
+          <p>
+            <em
+              >Note: the exact text and output may vary depending on your
+              operating system and current directory. The examples here are
+              simplified.</em
+            >
+          </p>
+          <p>
+            First, create a new environment with
+            <code>conda create -n learn-python python=3.11</code>.
+          </p>
+          <pre><code class="language-shell">$ conda create -n learn-python python=3.11
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
 
@@ -166,7 +290,7 @@ Solving environment: done
 The following packages will be downloaded:
     package                    |            build
     ---------------------------|-----------------
-    python-3.11.0             |       hb7a2778_3        21.2 MB
+    python-3.11                |       hb7a2778_3        21.2 MB
     ------------------------------------------------------------
                                            Total:        21.2 MB
 
@@ -175,58 +299,108 @@ Proceed ([y]/n)? y
 Preparing transaction: done
 Verifying transaction: done
 Executing transaction: done</code></pre>
-            <p>This command creates a new environment named "learn-Python" with Python 3.11 installed. The prompt will ask for confirmation before proceeding.</p>
-
-            <h3>2. Activate the Environment</h3>
-            <p>Now that you have created an environment, you can activate it by running the following command: <code>conda activate learn-python</code></p>
-            <pre><code class="language-shell">$ conda activate learn-python
+          <p>
+            This command creates a new environment named "learn-python" with
+            Python 3.11 installed. The prompt will ask for confirmation before
+            proceeding.
+          </p>
+          <h3>2. Activate the Environment</h3>
+          <p>
+            Now that you have created an environment, you can activate it by
+            running the following command:
+            <code>conda activate learn-python</code>
+          </p>
+          <pre><code class="language-shell">$ conda activate learn-python
 (learn-python) $</code></pre>
-            <p>The prompt changes to show the active environment name in parentheses. That means you are working inside the "learn-python" environment.</p>
-
-            <h3>3. Verify Your Environment</h3>
-            <p>You can verify that you are using the correct Python version by running the following command: <code>python --version</code></p>
-            <pre><code class="language-shell">(learn-python) $ python --version
+          <p>
+            The prompt changes to show the active environment name in
+            parentheses. That means you are working inside the "learn-python"
+            environment.
+          </p>
+          <h3>3. Verify Your Environment</h3>
+          <p>
+            You can verify that you are using the correct Python version by
+            running the following command: <code>python --version</code>
+          </p>
+          <pre><code class="language-shell">(learn-python) $ python --version
 Python 3.11.0
 (learn-python) $ conda list
 # packages in environment at /Users/username/anaconda3/envs/learn-python:
 #
 # Name                    Version                   Build  Channel
-python                    3.11.0               hb7a2778_3</code></pre>
-            <p>These commands confirm you're using the correct Python version and show the installed packages.</p>
-
-            <h3>4. Deactivate When Done</h3>
-            <p>When you're finished working, you can deactivate the environment to return to your base environment using the command <code>conda deactivate</code>.</p>
-            <pre><code class="language-shell">(learn-python) $ conda deactivate
+python                    3.11                       hb7a2778_3</code></pre>
+          <p>
+            These commands confirm you're using the correct Python version and
+            show the installed packages.
+          </p>
+          <h3>4. Deactivate When Done</h3>
+          <p>
+            When you're finished working, you can deactivate the environment to
+            return to your base environment using the command
+            <code>conda deactivate</code>.
+          </p>
+          <pre><code class="language-shell">(learn-python) $ conda deactivate
 $</code></pre>
-
-            <h3>Additional Tips</h3>
-            <ul>
-                <li>To see all your environments: <code>conda env list</code></li>
-                <li>To remove an environment: <code>conda env remove -n learn-python</code></li>
-                <li>To update all packages: <code>conda update --all</code></li>
-            </ul>
-
-            <p>With the environment set up, you can move on to basic Python syntax.</p>
-
-            <h2>Installing a text editor/IDE</h2>
-            <p>Next, install a text editor or IDE. I usually recommend <a href="https://code.visualstudio.com/" target="_blank">VS Code</a> or <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a>. If you already have one you like, use that. Early on, the goal is learning Python, not learning five editors at once.</p>
-
-            <p>You may have also heard of JupyterLab, which is common for notebooks. I do not use it much, mostly because VS Code and PyCharm/DataSpell fit my workflow better. If you want JupyterLab, install it in your environment with <code>conda install -c conda-forge jupyterlab</code>. The <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html" target="_blank">JupyterLab installation page</a> has more detail. To launch it, type <code>jupyter lab</code> in your terminal while that environment is active. It should open in your browser.</p>
-
-
-            <h2>Basic Python Syntax</h2>
-            <p>Open a new file in your editor and save it as <code>hello_world.py</code>. Hello World is the usual first program, so we may as well start there. In your file, write:</p>
-            <pre><code class="language-python">
+          <h3>Additional Tips</h3>
+          <ul>
+            <li>To see all your environments: <code>conda env list</code></li>
+            <li>
+              To remove an environment:
+              <code>conda env remove -n learn-python</code>
+            </li>
+            <li>To update all packages in your current environment: <code>conda update --all</code></li>
+          </ul>
+          <p>
+            With the environment set up, you can move on to basic Python syntax.
+          </p>
+          <h2>Installing a text editor/IDE</h2>
+          <p>
+            Next, install a text editor or IDE. I usually recommend
+            <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
+            or
+            <a href="https://www.jetbrains.com/pycharm/" target="_blank"
+              >PyCharm</a
+            >. If you already have one you like, use that. Early on, the goal is
+            learning Python, not learning five editors at once.
+          </p>
+          <p>
+            You may have also heard of JupyterLab, which is common for
+            notebooks. I do not use it much, mostly because VS Code fits my workflow better (I don't use a lot of notebooks except for exploratory analysis). If you want JupyterLab, install it in your environment with
+            <code>conda install -c conda-forge jupyterlab</code>. The
+            <a
+              href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html"
+              target="_blank"
+              >JupyterLab installation page</a
+            >
+            has more detail. To launch it, type <code>jupyter lab</code> in your
+            terminal while that environment is active. It should open in your
+            browser.
+          </p>
+          <h2>Basic Python Syntax</h2>
+          <p>
+            Open a new file in your editor and save it as
+            <code>hello_world.py</code>. Hello World is the usual first program,
+            so we may as well start there. In your file, write:
+          </p>
+          <pre><code class="language-python">
 print("Hello, world!")
                 </code></pre>
-            <p>Now, you can run the program by clicking the run button in your text editor/IDE. Or you can run it in your terminal by typing <code>python hello_world.py</code> and pressing enter. If you are in the environment you created earlier, you should see the following output:</p>
-            <pre><code class="language-shell">
+          <p>
+            Now, you can run the program by clicking the run button in your text
+            editor/IDE. Or you can run it in your terminal by typing
+            <code>python hello_world.py</code> and pressing enter. If you are in
+            the environment you created earlier, you should see the following
+            output:
+          </p>
+          <pre><code class="language-shell">
 Hello, world!
                 </code></pre>
-            <p>That is a Python program. Small, but it counts. Next are a few basic concepts you will use constantly.</p>
-
-            <h3>Variables and Data Types</h3>
-            <pre><code class="language-python">
+          <p>
+            That is a Python program. Small, but it counts. Next are a few basic
+            concepts you will use constantly.
+          </p>
+          <h3>Variables and Data Types</h3>
+          <pre><code class="language-python">
 # variables can store different types of data
 name = "Gregg"  # string
 age = 28        # integer
@@ -236,18 +410,16 @@ is_student = True  # boolean
 # print variables
 print(f"My name is {name} and I am {age} years old")
                 </code></pre>
-
-            <h3>Comments</h3>
-            <pre><code class="language-python">
+          <h3>Comments</h3>
+          <pre><code class="language-python">
 # this is a single-line comment
-"""
-This is a multi-line comment
-It can span multiple lines
-"""
-                </code></pre>
 
-            <h3>Python as a calculator</h3>
-            <pre><code class="language-python">
+# you can leave comments throughout the code to 
+# remind yourself what you are doing
+
+                </code></pre>
+          <h3>Python as a calculator</h3>
+          <pre><code class="language-python">
 # addition and subtraction
 x = 5 + 7   # x is now 12
 y = 10 - 4  # y is now 6
@@ -268,24 +440,33 @@ d = 15 % 4  # d is now 3
 # exponentiation
 e = 2 ** 3  # e is now 8
                 </code></pre>
-
-            <p>One thing I'd say: don't worry about writing clean code when you're starting out. Half the code I wrote early on is embarrassing to look at now, but it worked, and I learned from it. The goal right now is just to get things running.</p>
-
-            <p>Next up: data structures and control flow, the building blocks you'll use in almost every script you ever write.</p>
+          <p>
+            One thing I'd say: don't worry about writing clean code when you're
+            starting out. Half the code I wrote early on is embarrassing to look
+            at now, but it worked, and I learned from it. The goal right now is
+            just to get things running.
+          </p>
+          <p>
+            Next up: data structures and control flow, the building blocks
+            you'll use in almost every script you ever write.
+          </p>
         </div>
-    </article>
-</main>
-
-<footer class="site-footer">
-    <div class="wrap footer-grid">
-        <p>Motor control, proprioception, teaching, and applied analysis.</p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <p>© Gregg Eschelmuller</p>
         <div class="footer-links">
-            <a href="mailto:g.eschelmuller@gmail.com">Email</a>
-            <a href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&hl=en">Google Scholar</a>
-            <a href="https://www.linkedin.com/in/gregg-eschelmuller/">LinkedIn</a>
+          <a href="mailto:g.eschelmuller@gmail.com">Email</a
+          ><a
+            href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          ><a href="https://www.linkedin.com/in/gregg-eschelmuller/"
+            >LinkedIn</a
+          >
         </div>
-    </div>
-</footer>
-<script src="../js/main.js?v=20260711"></script>
-</body>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects · Gregg Eschelmuller</title>
+    <meta
+      name="description"
+      content="Projects in scientific computing, programming, and modelling."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/png" href="images/neuron.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;650&family=Source+Serif+4:opsz,wght@8..60,500;8..60,620;8..60,650&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html"
+          ><span class="brand-name">Gregg Eschelmuller</span></a
+        ><button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Primary navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="blog.html">Writing</a></li>
+            <li><a href="cv.html">CV</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="page-heading">
+        <h1>Projects</h1>
+        <p>
+          Code, models, and other things I’m working on. This page is a work in
+          progress.
+        </p>
+      </div>
+      <div class="prose">
+        <div class="project-entry">
+          <h2>PracticeLab</h2>
+
+            <p><em>Motor learning, data science, and practice design</em></p>
+
+            <p>
+              PracticeLab is an early-stage project I'm building to explore how
+              research on motor learning and skill acquisition can be used to
+              design better practice.
+            </p>
+
+            <p>
+              The idea grew out of a simple observation: we have decades of
+              research on how people learn motor skills, but translating that
+              knowledge into decisions about what and how to practise isn't
+              straightforward. I'm interested in whether we can use computational
+              methods to help bridge that gap.
+            </p>
+
+            <p>
+              Right now, I'm working on the underlying algorithm in Python.
+              The goal is to estimate a learner's current state from noisy
+              performance data and use those estimates to inform what they
+              should practice next. I’m interested in how ideas from motor learning research, including contextual interference, practice variability, and the relationship between practice and real-world performance, can inform better practice schedules. The goal is to design practice that reflects the demands of the actual task and promotes long-term learning and transfer, rather than simply improving performance during practice.
+            </p>
+
+            <p>
+              It's still very early, and much of the work involves figuring
+              out how to formalize these ideas mathematically. For me, it's
+              an interesting intersection of motor learning, statistics,
+              and programming.
+
+            </p>
+        </div>
+        <p style="margin-top:24px">
+          For now, the <a href="blog.html">writing page</a> has some practical
+          Python notes.
+        </p>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <p>© Gregg Eschelmuller</p>
+        <div class="footer-links">
+          <a href="mailto:g.eschelmuller@gmail.com">Email</a
+          ><a
+            href="https://scholar.google.com/citations?user=Sxvpo7YAAAAJ&amp;hl=en"
+            >Google Scholar</a
+          ><a href="https://www.linkedin.com/in/gregg-eschelmuller/"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
