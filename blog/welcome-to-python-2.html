@@ -99,13 +99,19 @@
             Lists are one of the most common ways to store multiple items in
             Python. They are ordered, so items keep their position. You can add,
             remove, and change them. In research, you might keep a list of
-            participant IDs, stimulus names, or data files to process.
+            participant IDs, stimulus names, or data files to process. You use <code>[]</code> to create lists. For example <code>my_data = [1, 5, 10]</code>
+          </p>
+          <h4>A quick note on indexing</h4>
+          <p>
+            When we have to access data in a list (or other data structures when allowed), we can index into the list. Basically, get the data we need. To index into a list, we can use the convention <code>list_name[index]</code>. Where the index is between 0 and n-1, this is because Python indexes starting at 0. So if you have 10 items, your indexes have to be between 0-9. You can also get a slice of the data by using the convention <code>list_name[index_1:index_2]</code>.
           </p>
           <pre><code class="language-python">participants = ["P001", "P002", "P003"]
 
 # access by index (count starts at 0)
 print(participants[0])   # P001
-print(participants[-1])  # P003 (last item)
+# Negative indexing counts backwards from the end of a list,
+# so -1 gives us the last item
+print(participants[-1]) # P003
 
 # add a new participant
 participants.append("P004")
@@ -113,12 +119,12 @@ participants.append("P004")
 # remove a participant
 participants.remove("P002")
 
-# loop over them
+# loop over them (will cover loops later)
 for pid in participants:
     print(pid)
           </code></pre>
           <p>
-            Lists aren't just for strings; they can hold numbers, booleans, or
+            The key with lists is that they are flexible containers for data. They can hold numbers, booleans, or
             even other lists:
           </p>
           <pre><code class="language-python"># list of trial accuracies
@@ -136,17 +142,14 @@ data = [
               Create a list of your top 5 favourite research tools or software.
             </li>
             <li>Add a new item to the list, then remove one.</li>
-            <li>
-              Print each item with its position number (hint: use
-              <code>enumerate()</code>). This is one of those times you will have to google.
-            </li>
+            <li>Create a list that contains lists of fruits, vegetables, and desserts, with labels</li>
           </ul>
           <h2>Tuples: Lists That Can't Change</h2>
           <p>
             Tuples are like lists, but immutable. Once you make one, it can't be
             changed. They’re great for storing fixed information, like
             coordinates, or function return values that shouldn’t be modified by
-            mistake.
+            mistake. Unlike lists, we use <code>()</code> to create tuples, but would still use <code>[]</code> to index into the tuple.
           </p>
           <pre><code class="language-python">origin = (0, 0)  # x, y coordinates
 print(origin[0])  # 0
@@ -205,9 +208,6 @@ for pid, scores in results.items():
               cities.
             </li>
             <li>Add a new country/capital pair.</li>
-            <li>
-              Loop through the dictionary and print “The capital of X is Y”.
-            </li>
           </ul>
           <h2>Sets: Unique Values Only</h2>
           <p>
@@ -268,10 +268,13 @@ elif accuracy &gt; 0.75:
 else:
     print("Needs improvement.")
 </code></pre>
+          <p>
+            Let's walk through this code. Basically the first <code>if</code> statement checks if accuracy is greater than 0.9. Only if this evaluates to <code>True</code> will the indented line run. If this happens, the rest of the <code>elif</code> or <code>else</code> statements will be skipped. If it evalutes to <code>False</code>, then the next line tries. This continues down until a condition evaluates to <code>True</code> or it reaches an <code>else</code> statement which will always run if everything else is <code>False</code> .
+          </p>
           <h3>Loops</h3>
           <p>
             Loops let you repeat actions without writing the same code over and
-            over.
+            over. 
           </p>
           <pre><code class="language-python"># for loop - iterates over a sequence of values
 for trial in range(1, 6):
@@ -283,6 +286,12 @@ while countdown &gt; 0:
     print(countdown)
     countdown -= 1
 </code></pre>
+            <p>For loops contain 3 main components:</p>
+            <ol>
+              <li>Iterator (loop variable): trial — holds the current value during each iteration.</li>
+              <li>Iterable (range): range(1, 6) — provides the sequence of values (1 through 5) that the loop iterates over.</li>
+              <li>Code block (loop body): print(f"Trial {trial}") — the indented code executed during each iteration.</li>
+            </ol>
           <h3>Try it yourself:</h3>
           <ul>
             <li>
@@ -303,7 +312,14 @@ while countdown &gt; 0:
 rt_list = [350, 420, 390]
 print(mean(rt_list))  # 386.666...
 </code></pre>
-          <p>You can also add default parameters:</p>
+          <p>A Python function has four main components:</p>
+          <ol>
+            <li>Function definition: def — keyword used to define a function.</li>
+            <li>Function name: mean — identifies the function so it can be called.</li>
+            <li>Parameter: values — receives the input data passed to the function.</li>
+            <li>Function body: return sum(values) / len(values) — performs the calculation and returns the result.</li>
+          </ol>
+          <p>You can also add default parameters. Basically values to default to if the user doesn't specify.</p>
           <pre><code class="language-python">def greet(name, greeting="Hello"):
     print(f"{greeting}, {name}!")
 
